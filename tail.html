@@ -1,0 +1,46 @@
+</footer>
+</article>
+<script>
+scratchblocks.renderMatching('pre.blocks', {
+  style: 'scratch3',
+  languages: ['nl'],
+});
+scratchblocks.renderMatching("code.b", {
+  style: 'scratch3',
+  languages: ['nl'],
+  inline: true
+});
+
+(function () {
+  const knop = document.getElementById("naarBoven")
+  const naarBoven = () => {
+    let isAanTScrollen = false
+    let isAanTScrollenTimeout
+    addEventListener(
+      "wheel",
+      () => {
+        isAanTScrollen = true
+        clearTimeout(isAanTScrollenTimeout)
+        isAanTScrollenTimeout = setTimeout(() => {
+          isAanTScrollen = false
+        }, 100)
+      },
+      { passive: true }
+    )
+
+    const c = document.documentElement.scrollTop || document.body.scrollTop
+    if (!isAanTScrollen && c > 0) {
+      requestAnimationFrame(naarBoven)
+      scrollTo(0, c - c / 8)
+    }
+  }
+  addEventListener("scroll", () => {
+    knop.classList[window.scrollY > 750 ? "add" : "remove"](
+      "zichtbaar"
+    )
+  })
+  knop.addEventListener("click", naarBoven);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+image: python:latest
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip
+    - venv/
+    - public/img
+
+pages:
+  script:
+    - pip install virtualenv
+    - virtualenv venv
+    - source venv/bin/activate
+    - pip install markdown
+    - pip install pygments
+    - mkdir -p public
+    - cp -ru snake tetris Makefile *.css *.html img public
+    - cd public
+    - make
+  artifacts:
+    paths:
+      - public
+  only:
+    - main

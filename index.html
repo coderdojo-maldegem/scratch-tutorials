@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head lang="nl">
+  <meta charset="UTF-8">
+  <meta name="color-scheme" content="dark light">
+  <title>CoderDojo Eeklo Scratch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Bart De Roy">
+  <meta name="description" content="This page presents Scratch tutorials
+  and game creation challenges from our CoderDojo in Eelko, Belgium">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon-precomposed" href="https://cdjeeklo.gitlab.io/scratch/img/coderdojo.png">
+  <meta property="og:image" content="https://cdjeeklo.gitlab.io/scratch/img/coderdojo.png">
+  <meta property="og:description" content="Scratch tutorials and game creation challenges from CoderDojo in Eelko, Belgium">
+  <meta property="og:title" content="CoderDojo Eeklo Scratch">
+  <meta name="twitter:title" content="CoderDojo Eeklo Scratch">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="scratchblocks-v3.4-min.js"></script>
+  <noscript><style>#loader { display: none; } #wrap, #warn { display: initial; }</style></noscript>
+</head>
+<body>
+  <header>
+    <!-- viewBox="0 0 250 50" --> 
+    <svg id="logo" height="50px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path fill="black" d="M21,15.5V6.6c0-0.8,0.6-1.4,1.4-1.4H27c0.4,0,0.7,0.1,1,0.4c0.3,0.3,0.4,0.6,0.4,1v8.8c0,0.8-0.6,1.4-1.4,1.4
+      l0,0h-4.6C21.6,16.9,21,16.3,21,15.5C21,15.5,21,15.5,21,15.5L21,15.5L21,15.5z M27,15.4V6.7h-4.5v8.7C22.5,15.4,27,15.4,27,15.4z
+      M25,0C11.2,0,0,11.2,0,25s11.2,25,25,25s25-11.2,25-25S38.8,0,25,0z M29.4,42.9c0,0.4-0.3,0.7-0.7,0.7c0,0,0,0,0,0h-6
+      c-0.2,0-0.4-0.1-0.5-0.2c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.4,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H25v-8.7h-2.2
+      c-0.4,0-0.7-0.3-0.7-0.7c0-0.4,0.3-0.7,0.7-0.7h3.7v10.2h1.5v-3.1c0-0.4,0.3-0.8,0.7-0.8c0.4,0,0.8,0.3,0.8,0.7c0,0,0,0,0,0.1V42.9
+      L29.4,42.9z M24.7,25c-6.5,0-11.8,5.4-11.8,11.9c0,6.4,5.1,11.6,11.5,11.8C11.3,48.7,0.7,38.1,0.7,25c0-13.1,10.6-23.7,23.7-23.7
+      c0.1,0,0.2,0,0.4,0c6.5-0.1,11.9,5.1,12,11.7c0.1,6.5-5.1,11.9-11.7,12C25,25,24.9,25,24.7,25z"/>
+      <text x="55" y="32"><tspan style="font-weight: bold;">CoderDojo</tspan>Belgium</text>
+    </svg>
+  </header>
+  <div id="loader"></div>
+  <div id="warn">
+    <svg width="100%" height="28" aria-hidden="true">
+      <path fill="darkred" d="M16 21.484v-2.969a.508.508 0 0 0-.5-.516h-3c-.281 0-.5.234-.5.516v2.969c0 .281.219.516.5.516h3c.281 0 .5-.234.5-.516zm-.031-5.843l.281-7.172a.378.378 0 0 0-.156-.297C16 8.094 15.86 8 15.719 8h-3.437c-.141 0-.281.094-.375.172-.109.078-.156.234-.156.328l.266 7.141c0 .203.234.359.531.359h2.891c.281 0 .516-.156.531-.359zM15.75 1.047l12 22c.344.609.328 1.359-.031 1.969S26.703 26 26 26H2c-.703 0-1.359-.375-1.719-.984s-.375-1.359-.031-1.969l12-22a1.988 1.988 0 0 1 3.5 0z"/>
+      <text x="40" y="20" fill="black">Javascript is uitgeschakeld.</text>
+      Javascript is uitgeschakeld.
+    </svg>
+  </div>
+  <main>
+    <a class="basis" href="#" hreflang="nl"><h2>Test</h2><small>basis</small>
+    </a>
+    <a class="ervaren" href="#" hreflang="nl"><h2>Test</h2><small>ervaren</small>
+    </a>
+    <a class="gevorderd" id="galgje" href="galgje" hreflang="nl"><h2>Galgje</h2><small>gevorderd</small>
+      <img class="preview"
+           src="../../img/galgje.png"
+           alt="Op een veld staat een tekening van een ventje dat aan de galg hangt. Op de grond liggen de letters U, I, E, E en A. In de lucht staan de letters L, L, K, K, R, L, N en D."/>
+    </a>
+
+  </main>
+  <footer><time datetime="2021-03-20">2021-03-20</time> <span>Eeklo</span></footer>
+  <script>
+    window.addEventListener('load', () => {
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('wrap').style.opacity = '1';
+    });
+    scratchblocks.renderMatching('pre.blocks', {
+      style: 'scratch3',
+      languages: ['nl'],
+    });
+  </script>
+</body>

@@ -1,0 +1,362 @@
+* {
+  box-sizing: inherit;
+}
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden auto;
+  box-sizing: border-box;
+  text-rendering:  optimizeLegibility;
+  background-color: var(--achtergrond-cdj);
+}
+:root {
+  --achtergrond-kleur: #fff;
+  --achtergrond-cdj:   #00a4c9;
+  --rand-kleur:  #ddd;
+  --link-kleur:  #0060a0;
+  --code-kleur:  #c00;
+  --tekst-kleur: #222;
+  --opvallende-kleur: black;
+  --basis:       gray;
+  --ervaren:     tomato;
+  --gevorderd:   gold;
+  --hoogte-maat: 16px;
+  font-size-adjust: 1;
+  font: var(--hoogte-maat)/2 DejaVu Sans, Georgia, sans-serif;
+}
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --achtergrond-kleur: black;
+    --rand-kleur:  #444;
+    --link-kleur:  #30bfff;
+    --code-kleur:  #f66;
+    --tekst-kleur: #eee;
+    --opvallende-kleur: white;
+    --basis:       gray;
+    --ervaren:     tomato;
+    --gevorderd:   darkgoldenrod;
+    --hoogte-maat: 16px;
+  }
+}
+@media screen {
+  @media not (prefers-reduced-motion: reduce) {
+    #wrap{
+      opacity: 0;
+      min-height: 100%;
+      transition: all 0.5s ease-out;
+    }
+    #loader {
+      border:     16px solid #f3f3f3;
+      border-top: 16px solid #3498db;
+      border-radius: 50%;
+      width:  120px;
+      height: 120px;
+      margin-left: calc((100vw - 140px)/2);
+      margin-top:  200px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    /**
+    main > a:hover{
+      animation: 0.5s zoom forwards;
+    }
+    @keyframes zoom {
+      0%   { transform: scale(1); }
+      100% { transform: scale(1.005); }
+    }
+    **/
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #loader {
+      display: none;
+    }
+  }
+}
+
+.scratchblocks-inline{
+  /* svg element is too tall */
+  height: 3.5rem;
+}
+.doorhalen:before{
+  content: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="520px" height="120px" viewport="0 0 100 100" stroke="red" stroke-linecap="round" stroke-width="10px"><line x1="10" y1="90" x2="510" y2="10"/></svg>');
+  position: relative;
+  top: 60px;
+  z-index: 2;
+  /* filter: saturate(50%); */
+}
+.doorhalen > .scratchblocks{
+  margin-top: -100px;
+  margin-left: 1rem;
+  z-index: 1;
+  filter: saturate(50%);
+}
+.blocks,
+.codehilite {
+  overflow: auto hidden;
+}
+.blocks,
+.codehilite > pre {
+  line-height: 1.1;
+}
+body {
+  color: var(--tekst-kleur);
+  background-color: var(--achtergrond-kleur);
+  overflow-y: hidden;
+  margin: 0 0 0 5px;
+}
+body, header, #warn, footer{
+  width: calc(100vw - 25px);
+}
+#warn{
+  display: none;
+  background-color: darksalmon;
+  padding: 1rem;
+}
+#naarBoven {
+  right:   1rem;
+  bottom:  calc((var(--hoogte-maat) * 2) + 50px + 1rem);
+  width:   60px;
+  height:  60px;
+  padding: 0;
+  opacity: 0;
+  outline: 0;
+  border: 2px solid var(--rand-kleur);
+  border-radius: 50%;
+  position:   fixed;
+  visibility: hidden;
+  background-color: var(--achtergrond-kleur);
+  color:            var(--tekst-kleur);
+  transition: background .12s,color .12s,visibility .3s,opacity .3s,box-shadow .3s;
+  box-shadow: 0 8px 16px -2px rgba(0,32,64,.15);
+  cursor: pointer;
+  z-index: 2;
+}
+#naarBoven.zichtbaar {
+  visibility: visible;
+  opacity: 1;
+}
+iframe {
+  border: none;
+  object-fit: contain;
+}
+
+header, footer{
+  display:   flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--achtergrond-cdj);
+  background-size:
+    var(--hoogte-maat) var(--hoogte-maat),
+    var(--hoogte-maat) var(--hoogte-maat),
+    100% var(--hoogte-maat);
+  background-repeat: repeat-x;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+body > header{
+  justify-content: center;
+}
+header > * {
+  flex-shrink: 0;
+  height: 50px;
+}
+header svg text{
+  font-size: 20px;
+  font-family: DejaVu Sans, Georgia, sans-serif;
+}
+header svg#logo{
+  flex-basis: 50px;
+}
+header svg#logo text{
+  display: none;
+  font-stretch: ultra-condensed;
+}
+
+footer {
+  background-image: linear-gradient(135deg, var(--achtergrond-kleur) 0%, var(--achtergrond-kleur) 50%, transparent 50%, transparent 100%), linear-gradient(-135deg, var(--achtergrond-kleur) 0%, var(--achtergrond-kleur) 50%, transparent 50%, transparent 100%), linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+  /* chromium: small misalignment when using center in stead of left */
+  background-position: top left, top left, top left;
+  padding-top:    calc(var(--hoogte-maat) * 2);
+  padding-bottom: 1rem;
+}
+header {
+  background-image: linear-gradient(45deg, var(--achtergrond-kleur) 0%, var(--achtergrond-kleur) 50%, transparent 50%, transparent 100%), linear-gradient(-45deg, var(--achtergrond-kleur) 0%, var(--achtergrond-kleur) 50%, transparent 50%, transparent 100%), linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+  /* chromium: small misalignment when using center in stead of left */
+  background-position: bottom left, bottom left, bottom left;
+  padding-bottom: calc(var(--hoogte-maat) * 2);
+  padding-top:    1rem;
+}
+header > *{ align-self: start; }
+footer > *{ align-self: end; }
+
+.basis {
+  background-color: var(--basis);
+}
+.ervaren {
+  background-color: var(--ervaren);
+}
+.gevorderd {
+  background-color: var(--gevorderd);
+}
+.basis > h2{
+  background: transparent url('scratch-basis.svg') no-repeat 0 0;
+}
+.ervaren > h2{
+  background: transparent url('scratch-ervaren.svg') no-repeat 0 0;
+}
+.gevorderd > h2{
+  display: block;
+  background: transparent url('scratch-gevorderd.svg') no-repeat 0 0;
+}
+
+main {
+  display: flex;
+}
+@supports (display:grid) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: var(--hoogte-maat);
+    align-items: stretch;
+    justify-items: stretch;
+  }
+}
+main > a > *{
+  margin: 0;
+  text-align: right;
+  color: black;
+}
+main > a:hover{
+  text-decoration: none;
+  filter: none;
+}
+main > a{
+  min-width:  200px;
+  min-height: 200px;
+  outline: none;
+  filter: brightness(0.9);
+  offset-anchor: calc(var(--hoogte-maat) * -2);
+  padding: calc(var(--hoogte-maat) * 1.5) 0.5rem;
+  background-size:
+    var(--hoogte-maat) var(--hoogte-maat),
+    var(--hoogte-maat) var(--hoogte-maat),
+    var(--hoogte-maat) var(--hoogte-maat),
+    var(--hoogte-maat) var(--hoogte-maat),
+    100% 100%;
+  background-repeat: repeat-x;
+  background-image:
+    linear-gradient(135deg, var(--achtergrond-kleur) 0%, var(--achtergrond-kleur) 50%, transparent 50%, transparent 100%),
+    linear-gradient(-135deg, var(--achtergrond-kleur) 0%, var(--achtergrond-kleur) 50%, transparent 50%, transparent 100%),
+    linear-gradient(45deg, var(--achtergrond-kleur) 0%, var(--achtergrond-kleur) 50%, transparent 50%, transparent 100%),
+    linear-gradient(-45deg, var(--achtergrond-kleur) 0%, var(--achtergrond-kleur) 50%, transparent 50%, transparent 100%),
+    radial-gradient(circle at top right,rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 100%);
+  /* chromium: small misalignment when using center in stead of left */
+  background-position: top left, top left, bottom left, bottom left;
+}
+
+h1 {
+  text-align: center;
+  font-size: 200%;
+}
+h2 {
+  font-size: 160%;
+}
+.preview {
+  width: 100%;
+  min-width:  100px;
+  min-height: 100px;
+  max-width:  540px;
+  object-fit: contain;
+}
+main,
+article {
+  padding: 0 1rem;
+  min-height: calc(100vh - (var(--hoogte-maat) * 4) - 100px - 1rem);
+}
+
+blockquote{
+  width:     500px;
+  max-width: 100%;
+  margin:  1em 0 1em 0;
+  padding: 0 10px 100px 40px;
+  background: no-repeat bottom left/100px transparent url('scratch-basis.svg');
+}
+
+li{
+  line-height: 1.5;
+}
+ul{
+  list-style: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="28px" height="28px" fill="none" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m1 6c1.8.9 3.7 2.7 4.1 4.4.3-1.9.2-5.8 5.1-9" /></svg>') outside;
+}
+article > footer,
+article > header {
+  margin: 0 -1rem;
+}
+article > footer {
+  margin-top: 8rem;
+}
+h1,h2,h3,h4{
+  color: var(--opvallende-kleur);
+}
+code,
+a {
+  padding: 0  0.2em;
+  text-decoration: none;
+}
+code{
+  color: var(--code-kleur);
+}
+a {
+  color: var(--link-kleur);
+}
+a.volgende{
+  text-align: center;
+  border:  2px solid var(--rand-kleur);
+  border-radius: 10px;
+  padding: 0.2rem 1rem;
+}
+a.volgende{
+  background-color: var(--achtergrond-kleur);
+}
+a.volgende:active{
+  background-color: var(--tekst-kleur);
+}
+a.volgende:active,
+a.volgende:hover{
+  border: 2px solid var(--tekst-kleur);
+}
+a:active,
+a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 360px){
+  header svg#logo{
+    flex-basis: 240px;
+  }
+  header svg#logo text{
+    display: initial;
+  }
+}
+@media screen and (min-width: 500px){
+  @supports (display:grid) {
+    main {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+@media screen and (min-width: 700px){
+  .blocks,
+  .codehilite {
+    margin: 2rem 0 2rem 2rem;
+    line-height: 1.2;
+  }
+  @supports (display:grid) {
+    main {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
