@@ -159,6 +159,10 @@ header, footer{
 body > header{
   justify-content: center;
 }
+/* body > footer{ */
+/*   position: fixed; */
+/*   bottom: 0px; */
+/* } */
 header > * {
   flex-shrink: 0;
   height: 50px;
@@ -212,11 +216,11 @@ footer > *{ align-self: end; }
   background: transparent url('scratch-gevorderd.svg') no-repeat 0 0;
 }
 
-main {
+body > main {
   display: flex;
 }
 @supports (display:grid) {
-  main {
+ body > main {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: var(--hoogte-maat);
@@ -224,20 +228,24 @@ main {
     justify-items: stretch;
   }
 }
-main > a > *{
+body > main > a > *{
   margin: 0;
   text-align: right;
-  color: black;
+  color: inherit;
 }
-main > a:hover{
+body > main > a:focus,
+body > main > a:active,
+body > main > a:hover{
   text-decoration: none;
   filter: none;
+  color: black;
 }
-main > a{
+body > main > a{
+  color: #222;
   min-width:  200px;
   min-height: 200px;
   outline: none;
-  filter: brightness(0.9);
+  filter: brightness(0.6);
   offset-anchor: calc(var(--hoogte-maat) * -2);
   padding: calc(var(--hoogte-maat) * 1.5) 0.5rem;
   background-size:
@@ -271,10 +279,10 @@ h2 {
   max-width:  540px;
   object-fit: contain;
 }
-main,
-article {
-  padding: 0 1rem;
-  min-height: calc(100vh - (var(--hoogte-maat) * 4) - 100px - 1rem);
+main {
+  padding-left:  1rem;
+  padding-right: 1rem;
+  min-height: calc(100vh - (var(--hoogte-maat) * 4) - 8rem);
 }
 
 blockquote{
@@ -290,13 +298,6 @@ li{
 }
 ul{
   list-style: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="28px" height="28px" fill="none" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m1 6c1.8.9 3.7 2.7 4.1 4.4.3-1.9.2-5.8 5.1-9" /></svg>') outside;
-}
-article > footer,
-article > header {
-  margin: 0 -1rem;
-}
-article > footer {
-  margin-top: 8rem;
 }
 h1,h2,h3,h4{
   color: var(--opvallende-kleur);
@@ -343,7 +344,7 @@ a:hover {
 }
 @media screen and (min-width: 500px){
   @supports (display:grid) {
-    main {
+    body > main {
       grid-template-columns: 1fr 1fr;
     }
   }
@@ -355,7 +356,7 @@ a:hover {
     line-height: 1.2;
   }
   @supports (display:grid) {
-    main {
+    body > main {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }

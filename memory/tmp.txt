@@ -1,0 +1,92 @@
+Pas de code van "maakkaarten" aan om de variabelen te gebruiken.
+
+En maak een nieuw stuk code:
+
+Niet vergeten testen!
+
+6
+
+Gevorderd
+
+VALSSPELEN VERBODEN!
+
+Je kan nu alle kaarten tegelijk omdraaien. Zo
+is het niet moeilijk om te winnen! Dat gaan
+we eens lekker tegenhouden...
+Maak een nieuwe variabele en noem ze
+"reedsomgedraaid".
+Zet de variabele op 0 in het
+stukje bij "verstoppen".
+De code om de kaart om te
+draaien wordt wat langer:
+
+Kies zelf 2 geluidjes...
+
+Niet vergeten testen!
+
+7
+
+Gevorderd
+
+WINNEN
+
+Maak een nieuwe variabele aan, kies "voor
+alle sprites" en noem ze "kaartentegaan".
+Daar gaan we tellen of je gewonnen bent.
+Pas de code voor "maakkaarten" aan op 2
+plaatsen:
+
+Maak een lege nieuwe sprite. Typ (of schrijf)
+in het groot "gewonnen" in het uiterlijk van de
+sprite. Deze tonen we alleen als je alle
+kaarten hebt verwijderd.
+
+!
+n
+ne
+
+G
+
+n
+o
+ew
+
+Niet vergeten testen!
+
+8
+
+Gevorderd
+
+SCHUDDEN VOOR GEBRUIK
+
+Vond je het ook nogal makkelijk om te raden
+waar de dubbels lagen? Nu gaan we de
+kaarten schudden... Dat doen we door de
+elementen van onze lijst "kostuums" te
+verwisselen.
+Maak 3 nieuwe variabelen
+aan, kies telkens "voor alle
+sprites", en noem ze:
+
+Ga terug naar de kaart sprite.
+Maak een nieuw blok aan, en
+noem het "schudden". Deze
+keer vink je NIET aan "voer
+uit zonder het scherm te
+verversen".
+Klik ook op "voeg een invoer
+toe getal of tekst" en noem de
+invoer "aantal".
+
+Niet vergeten testen!
+
+9
+
+Gevorderd
+
+KLAAR!
+Niet vergeten testen!
+
+10
+
+
