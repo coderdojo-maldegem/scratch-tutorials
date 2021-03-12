@@ -21,13 +21,11 @@ In dit project maak je kennis met de volgende concepten:
 * variabelen gebruiken
 
 Er zijn vijf stappen.
+
 Elke stap bestaat uit een opdracht en uitleg over nieuwe blokken.
 
-This work by Hasselt University is licensed under a Creative Commons AttributionNonCommercial-ShareAlike 4.0 International License.
-http://creativecommons.org/licenses/by-nc-sa/4.0/
+<small>This work by Hasselt University is licensed under a Creative Commons AttributionNonCommercial-ShareAlike 4.0 International License. <http://creativecommons.org/licenses/by-nc-sa/4.0/></small>
 
-Contact
-
-<frank.neven@uhasselt.be>, <wim.lamotte@uhasselt.be>, <jonny.daenen@uhasselt.be>
+<p align="center"><frank.neven@uhasselt.be>, <wim.lamotte@uhasselt.be>, <jonny.daenen@uhasselt.be></p>
 
 [Terug](../) [Stap 1 →](1.html)
