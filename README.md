@@ -40,3 +40,61 @@ $ firefox 127.0.0.1:8001 &>/dev/null &
 ```
 
 (Elke regel die met "$" begint is een opdrachtregel. Je moet waarschijnlijk in Windows `cmd.exe` gebruiken en `&>/dev/null` weglaten?)
+
+## todo
+
+### More content - meer inhoud
+
+I have not committed to a specific framework so that content can be added before major design decisions are made.
+This is just to see if anyone finds this assignment arrangement useful and if accessibility is effectively improved.
+
+Ik heb me niet gebonden aan een specifiek raamwerk zodat de inhoud kan worden toegevoegd vooraleer belangrijke ontwerp keuzes gemakt worden.
+Het is de bedoeling om te onderzoeken of deze voorstelling van de opdrachten de toegankelijkheid verbetert en of iemand er het nut van inziet.
+
+While I'll be adding more assignments, there are some improvements to the content I can think of:
+
+* accessibility improvements
+* language and terminology improvements
+* multilingual interface
+* crosslink assignments
+* service worker for offline caching
+* provide a guide for writing tutorials
+
+Terwijl ik meer opdrachten zal toevoegen zijn dit een paar verbeteringen waaraan ik denk:
+
+* verbeteringen van de toegankelijkheid
+* heldere taal en consistente terminologie
+* meertaligheid
+* breng opdrachten in verband met elkaar
+* installatie van een service worker voor offline gebruik
+* beschrijving van hoe je leermiddelen schrijft
+
+### New content - nieuwe inhoud
+
+In addition, it may be helpful to create tools for future work:
+
+* pandoc templates: so that a tutorial can be written in markdown and both be exported to pdf and html
+* scratch export processing: a shell script to more easily get the code block syntax and requisites
+* possibly create a python-markdown addon to in stead convert the block code to static svg (rather than modifying the DOM)
+
+Bovendien kunnen de volgende hulpmiddelen toekomstig werk vergemakkelijken:
+
+* pandoc sjablonen: zodat een opdracht in markdown kan geschreven worden en zowel geëxporteerd kan worden als pdf en in html
+* scratch uitvoer bewerking: een shell script om gemakkelijker scripts in block syntax en benodigdheden uit een geëxporteerd project te halen
+* een uitbreiding van python-markdown om the block code om te zetten in svg, en zo javascript DOM manipulatie overbodig te maken
+
+### Integration - integratie
+
+Thoughts about integrating with the "coolest projects" website (on https://coderdojo.digitalmove.be):
+
+* use Laravel features: paging, routes, ...
+* user progress card (CoderDojo Belgium google drive)
+* user feedback and inquiry
+* redesign and separate out interface
+
+Een paar bedenkingen over mogelijke integratie met de "coolest projects" site:
+
+* gebruik Laravel functies voor navigatie enzo
+* spaarkaart voor gebruikers (CoderDojo Belgium google drive)
+* gebruikers onderzoek en feedback
+* herwerken van de interface in een sjabloon

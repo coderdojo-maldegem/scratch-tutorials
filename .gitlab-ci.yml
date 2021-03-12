@@ -17,7 +17,7 @@ pages:
     - pip install markdown
     - pip install pygments
     - mkdir -p public
-    - cp -ru galgje Makefile *.css *.html img public
+    - cp -ru galgje Makefile *.css *.html *.js img public
     - cd public
     - make
   artifacts:

@@ -16,7 +16,6 @@
   <meta name="twitter:title" content="CoderDojo Eeklo Scratch">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="main.css">
-  <script src="scratchblocks-v3.4-min.js"></script>
   <noscript><style>#loader { display: none; } #wrap, #warn { display: initial; }</style></noscript>
 </head>
 <body>
@@ -30,7 +29,7 @@
       c-0.4,0-0.7-0.3-0.7-0.7c0-0.4,0.3-0.7,0.7-0.7h3.7v10.2h1.5v-3.1c0-0.4,0.3-0.8,0.7-0.8c0.4,0,0.8,0.3,0.8,0.7c0,0,0,0,0,0.1V42.9
       L29.4,42.9z M24.7,25c-6.5,0-11.8,5.4-11.8,11.9c0,6.4,5.1,11.6,11.5,11.8C11.3,48.7,0.7,38.1,0.7,25c0-13.1,10.6-23.7,23.7-23.7
       c0.1,0,0.2,0,0.4,0c6.5-0.1,11.9,5.1,12,11.7c0.1,6.5-5.1,11.9-11.7,12C25,25,24.9,25,24.7,25z"/>
-      <text x="55" y="32"><tspan style="font-weight: bold;">CoderDojo</tspan>Belgium</text>
+      <text x="55" y="32">CoderDojo<tspan style="font-weight: lighter;">Belgium</tspan></text>
     </svg>
   </header>
   <div id="loader"></div>
@@ -41,22 +40,27 @@
       Javascript is uitgeschakeld.
     </svg>
   </div>
-  <main>
-    <a class="basis" href="#" hreflang="nl"><h2>Test</h2><small>basis</small>
+  <main id="wrap">
+    <a class="basis" href="flappybat" hreflang="nl"><h2>Flappy Bat</h2><small>basis</small>
+      <img class="tile"
+           src="../../img/flappybat.png"
+           alt="In het Flappy Bat spel is een vleermuis die door een griezelig bos vliegt. We zien een dwarsdoorsnede van een muur met een gat waartussen de vleermuis moet proberen vliegen. Links bovenaan is de score variabele weergegeven met de waarde 2."/>
     </a>
-    <a class="ervaren" href="#" hreflang="nl"><h2>Test</h2><small>ervaren</small>
+    <a class="ervaren" href="pong" hreflang="nl"><h2>Pong</h2><small>ervaren</small>
+      <img class="tile"
+           src="../../img/pong.png"
+           alt="Het pong spel heeft een rode vloer, het pallet (de plank) is blauw, de achtergrond is wit en in de bovenhoeken is het geel. Links onderaan is de score variabele weergegeven met de waarde 19."/>
     </a>
     <a class="gevorderd" id="galgje" href="galgje" hreflang="nl"><h2>Galgje</h2><small>gevorderd</small>
-      <img class="preview"
+      <img class="tile"
            src="../../img/galgje.png"
            alt="Op een veld staat een tekening van een ventje dat aan de galg hangt. Op de grond liggen de letters U, I, E, E en A. In de lucht staan de letters L, L, K, K, R, L, N en D."/>
     </a>
     <a class="gevorderd" id="memory" href="memory" hreflang="nl"><h2>Memory</h2><small>gevorderd</small>
-      <img class="preview"
+      <img class="tile"
            src="../../img/memory.png"
            alt="Het spel memory. Op een witte achtergrond staan plaatjes door elkaar in een rooster. Er zijn telkens twee plaatjes van dezelfde figuur. Links bovenaan staat een variabele kaarten te gaan met de waaarde 24."/>
     </a>
-
   </main>
   <footer><time datetime="2021-03-20">2021-03-20</time> <span>Eeklo</span></footer>
   <script>

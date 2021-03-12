@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<head lang="nl">
+  <meta charset="UTF-8">
+  <meta name="color-scheme" content="dark light">
+  <title>CoderDojo Eeklo Scratch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Bart De Roy">
+  <meta name="description" content="This page presents Scratch tutorials
+  and game creation challenges from our CoderDojo in Eelko, Belgium">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" type="text/css" href="../../content.css">
+  <script type="application/javascript" src="../../scratchblocks-v3.4-min.js"></script>
+  <script type="application/javascript" src="../../nl.js"></script>
+</head>
+<body>
+  <article>
+    <button id="naarBoven">
+      <svg xmlns="http://www.w3.org/2000/svg"
+           width="24"
+           height="24"
+           viewBox="0 0 24 24"
+           fill="none"
+           stroke="currentColor"
+           stroke-width="2"
+           stroke-linecap="round"
+           stroke-linejoin="round">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+    </button>
+    <header>
+      <svg viewBox="0 0 100 100" height="50px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g transform="translate(0 59)">
+          <path d="m21.9 14.8c-2.4-.5-5.3-1.3-7.7-3.5-5.5-4.9-7.2-13-11-10.9-3.9 2.1-3.8 15.2 8.4 19.2 4.2 1.4 8 1.4 11.1 1.3.8 0 7.7-.7 10.1-4.1s.7-4.3-.1-4.7c-.9-.5-7.4 3.3-10.8 2.7z" fill="#ffab19" stroke="#001026" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+          <path d="m3.8.6c-2 .6-3 4.8-2 8.3s2.6 5.3 3.9 6.6c-.2-.7-.6-2.9 1.1-4.2 2.1-1.7 5.8-.8 5.8-.8s-3.1-3.8-4.7-6.5c-1.6-2.3-2.1-3.8-4.1-3.4z" fill="#fff"/>
+        </g>
+        <path d="m37.7 81.5c-1.8 1.2-8 5.6-15.9 8.1l-.4.1c-.4.1-.6.6-.4 1 1.7 2.4 4.8 7.2-.7 8.9-5.3 1.7-15.2-12.4-11-16.1 1.9-1.4 3.6-.7 4.5-.3.5.2 1 .2 1.5.1 1.2-.4 3.4-1.2 5.1-2.1 4.3-2.2 5.3-3.1 7.3-4.6s6.6-5.2 10.3-2c3.2 2.7 1.4 5.7-.3 6.9z" fill="#ffab19" stroke="#001026" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+        <path d="m53.6 60.7c.5.4 6.6 7.6 8.6 5.8 2.4-2.1 5.7-6.2 9.3-2.9s-3.2 8.9-6.1 10.4c-6.9 3.1-12.5-2.8-13.7-4.4s-3.3-4.3-3.3-6.9c.1-2.8 3.5-3.5 5.2-2z" fill="#ffab19" stroke="#001026" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+        <g transform="translate(28 57)">
+          <path d="m18.2 19.7c1.2-.9 2.4-2.4 4-4.7 1.3-1.9 2.7-5.6 2.7-5.6.9-2.5 1.5-7.3-1.8-7.2-2.2.1-4.2-.2-7.6-.7-6-1.2-7.1-2-9.6 2.1-2.7 4.8-9.6 8.3-1.1 16.6 0 0 4.9 3.8 10.8 9.6 4 3.9 10.3 9.5 12.5 11.4.5.4 1.1.6 1.7.7 9.7.9 16.9-.1 16.9-4.4 0-7.2-14.3-4.7-14.3-4.7s-4.6-3.9-6.7-5.8z" fill="#ffab19" stroke="#001026" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+          <path d="m22.6 13s1.9-2.5-2.4-5.2c-4.5-2.9-6.2.3-8 2.7-2 3.1 0 4.6 2 6.4 1.6 1.5 3.1 2.7 3.1 2.7s3.1-2.1 5.3-6.6z" fill="#fff"/>
+        </g>
+        <path d="m30.2 68.4c2.2 2.8 5.6 6.3 1.3 9.2-5.9 3.3-10.8-6.7-11.8-10.2-.9-3.1 1.7-5.1 3.9-6.8 4.3-3.1 7.9-5.9 11.9-4.4 5 1.8 1.4 5.8-1.1 7.6-1.5 1.1-3 2.3-4.1 3-.3.5-.4 1.1-.1 1.6z" fill="#ffab19" stroke="#001026" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+        <g transform="translate(14)">
+          <path d="m39.1 9c-2.3-.4-4.7-.6-7.5-.4-4.7.2-9.2 1.9-9.2 1.9l-12.1-7.9c-.4-.2-.9.1-.8.5l2.1 17.9c.6-.8-10.6 12.8-3.5 24.2s22.2 16.5 41 12.8 23.2-14.5 22-20.2-8.3-7.8-8.3-7.8-.1-4.5-3.3-10c-1.9-3.3-8.3-8-8.3-8l-2.6-10.7c-.1-.4-.6-.5-.9-.3z" fill="#ffab19" stroke="#001026" stroke-width="1.2"/>
+          <path d="m62.5 30.4s6.9 1.8 8.1 7.5-3.6 16-22.2 19.6c-24.2 5-35.7-9.4-29-20 6.7-10.7 18.2-1.6 26.6-2.2 7.2-.5 8-6.8 16.5-4.9z" fill="#fff"/>
+          <g stroke="#001026" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2">
+            <path d="m31 41.1c0-.4.4-.7.8-.6 1.9.7 7.3 2.3 13.3 2.7 5.4.3 8.6 0 10.1-.3.5-.1.9.4.7.9-.9 2.7-4.7 10.2-15.2 9.6-9.1-1-10-7.4-9.7-12.3z" fill="#fff"/>
+            <path d="m69 35.4s7.2-.1 11.9-3.9"/>
+            <path d="m69.4 41.3s3.9 1.9 10.2 1.4"/>
+            <path d="m45.6 32.7c2.1 0 4.3.2 4.4.9.1 1.4-1.4 4.2-3 4.3-1.8.2-6-2.3-6-3.9-.1-1.2 2.6-1.3 4.6-1.3z" fill="#001026"/>
+            <path d="m.6 31.2s8.6 2.8 12.1 5.9"/>
+            <path d="m1.3 41.2s7.4 1.1 11.7-.6"/>
+          </g>
+          <g transform="translate(44 15)">
+            <path d="m13.4 6c2.9 4.5 3 9.6.2 11.4s-7.4-.3-10.4-4.8c-2.9-4.5-3-9.6-.2-11.4 2.8-1.9 7.5.3 10.4 4.8z" fill="#fff" stroke="#001026" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+            <path d="m13 11.7c0 1.1-.8 2-1.8 2s-1.8-.9-1.8-2 .8-2 1.8-2 1.8.9 1.8 2" fill="#001026"/>
+          </g>
+          <g transform="translate(19 18)">
+            <path d="m13.6 5.8c3 4.4 2.8 9.8.1 11.7-3.3 1.9-7.7.5-10.7-3.9-3.1-4.4-3.3-10.1-.2-12.3 3.1-2.3 7.8.1 10.8 4.5z" fill="#fff" stroke="#001026" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+            <path d="m13 11.6c0 1.1-.8 2-1.8 2s-1.8-.9-1.8-2 .8-2 1.8-2c1 .1 1.8.9 1.8 2" fill="#001026"/>
+          </g>
+        </g>
+      </svg>
+      <!-- viewBox="0 0 250 50" --> 
+      <svg id="logo" height="50px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path fill="black" d="M21,15.5V6.6c0-0.8,0.6-1.4,1.4-1.4H27c0.4,0,0.7,0.1,1,0.4c0.3,0.3,0.4,0.6,0.4,1v8.8c0,0.8-0.6,1.4-1.4,1.4
+        l0,0h-4.6C21.6,16.9,21,16.3,21,15.5C21,15.5,21,15.5,21,15.5L21,15.5L21,15.5z M27,15.4V6.7h-4.5v8.7C22.5,15.4,27,15.4,27,15.4z
+        M25,0C11.2,0,0,11.2,0,25s11.2,25,25,25s25-11.2,25-25S38.8,0,25,0z M29.4,42.9c0,0.4-0.3,0.7-0.7,0.7c0,0,0,0,0,0h-6
+        c-0.2,0-0.4-0.1-0.5-0.2c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.4,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H25v-8.7h-2.2
+        c-0.4,0-0.7-0.3-0.7-0.7c0-0.4,0.3-0.7,0.7-0.7h3.7v10.2h1.5v-3.1c0-0.4,0.3-0.8,0.7-0.8c0.4,0,0.8,0.3,0.8,0.7c0,0,0,0,0,0.1V42.9
+        L29.4,42.9z M24.7,25c-6.5,0-11.8,5.4-11.8,11.9c0,6.4,5.1,11.6,11.5,11.8C11.3,48.7,0.7,38.1,0.7,25c0-13.1,10.6-23.7,23.7-23.7
+        c0.1,0,0.2,0,0.4,0c6.5-0.1,11.9,5.1,12,11.7c0.1,6.5-5.1,11.9-11.7,12C25,25,24.9,25,24.7,25z"/>
+        <text x="55" y="32">CoderDojo<tspan style="font-weight: lighter;">Belgium</tspan></text>
+      </svg>
+    </header>
+    <main>
+<h1>Letters verstoppen</h1>
+<p>Bij het script van de letter sprite komen enkele blokjes bij om het <em>streep</em> uiterlijk te kiezen.</p>
+<p>Als we de grootte op 50% zetten kunnen we extra lange woorden kiezen!</p>
+<pre class="blocks">
+wanneer groene vlag wordt aangeklikt
+richt naar (90) graden
+verander uiterlijk naar [Block-streep v]
+maak grootte (50) %
+verdwijn
+maak [woord v] (item (willekeurig getal tussen (1) en (lengte van [woorden v])) van [woorden v]
+ga naar x: (-200) y: (100)
+maak [i v] (0)
+herhaal (lengte van (woord))
+  verander [i v] met (1)
+  maak [mijnletter v] (letter (i) van (woord))
+  maak een kloon van (mezelf v)
+  verander x met (30)
+einde
+</pre>
+
+<pre class="blocks doorhalen">
+wanneer ik als kloon start
+verander uiterlijk naar (voeg [Block-] en (mijnletter) samen
+verschijn
+</pre>
+
+<p>Bij het kloon script van de letter sprite mag het blokje dat de juiste letter laat zien weg.
+We zullen later nog een extra script maken.</p>
+<pre class="blocks">
+wanneer ik signaal [toonletter v] ontvang
+als <(mijnletter) = (antwoord)> dan
+  verander uiterlijk naar (voeg [Block-] en (mijnletter) samen)
+  maak [gevonden v] (1)
+</pre>
+
+<p>Dit script kan je nu nog niet testen. Maak eerst de variabele <em>gevonden</em> aan, voor alle sprites</p>
+<p><img src="data:image/png;base64,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 f5c5iNNLWt2/AAAAAElFTkSuQmCC"
+     alt="Dialoog voor het maken van een variabele waar de variabele gevonden te zien is."></p>
+<p>Nu zou je alleen streepjes mogen zien</p>
+</main><footer>
+<a href="3.html">← Stap 3</a> <a href="5.html">Stap 5 →</a></footer>
+</article>
+<script>
+scratchblocks.renderMatching('pre.blocks', {
+  style: 'scratch3',
+  languages: ['nl'],
+});
+scratchblocks.renderMatching("code.b", {
+  style: 'scratch3',
+  languages: ['nl'],
+  inline: true
+});
+
+(function () {
+  const knop = document.getElementById("naarBoven")
+  const naarBoven = () => {
+    let isAanTScrollen = false
+    let isAanTScrollenTimeout
+    addEventListener(
+      "wheel",
+      () => {
+        isAanTScrollen = true
+        clearTimeout(isAanTScrollenTimeout)
+        isAanTScrollenTimeout = setTimeout(() => {
+          isAanTScrollen = false
+        }, 100)
+      },
+      { passive: true }
+    )
+
+    const c = document.documentElement.scrollTop || document.body.scrollTop
+    if (!isAanTScrollen && c > 0) {
+      requestAnimationFrame(naarBoven)
+      scrollTo(0, c - c / 8)
+    }
+  }
+  addEventListener("scroll", () => {
+    knop.classList[window.scrollY > 750 ? "add" : "remove"](
+      "zichtbaar"
+    )
+  })
+  knop.addEventListener("click", naarBoven);
+})();
+</script>
+</body>
+</html>
