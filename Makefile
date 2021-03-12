@@ -6,7 +6,7 @@ all: $(patsubst %.md, %.html, $(MD_FILES))
 %.html: %.md head.html tail.html
 	$(info Running markdown_py on $< $@)
 	@cp -f head.html $@
-	@printf '\n  %s%s%s%s' '<time datetime="' `date +%U` '">' `date +%F` '</time>' >> $@
-	@markdown_py -e UTF-8 -x fenced_code -x codehilite $< >> $@
+	@markdown_py -e UTF-8 $< >> $@
+	$(if $(findstring index.md,$<),@sed -i 's/^<p><img/<p align="center"><img/g' $@)
 	@sed -i '$$s/<p>\(.*\)<\/p>/\1/g;$$i\<\/main\>\<footer\>' $@
 	@cat tail.html >> $@

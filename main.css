@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: inherit;
 }
@@ -17,9 +18,9 @@ html {
   --code-kleur:  #c00;
   --tekst-kleur: #222;
   --opvallende-kleur: black;
-  --basis:       gray;
-  --ervaren:     tomato;
-  --gevorderd:   gold;
+  --basis:       #30d4f9;
+  --ervaren:     firebrick;
+  --gevorderd:   darkgoldenrod;
   --hoogte-maat: 16px;
   font-size-adjust: 1;
   font: var(--hoogte-maat)/2 DejaVu Sans, Georgia, sans-serif;
@@ -32,9 +33,6 @@ html {
     --code-kleur:  #f66;
     --tekst-kleur: #eee;
     --opvallende-kleur: white;
-    --basis:       gray;
-    --ervaren:     tomato;
-    --gevorderd:   darkgoldenrod;
     --hoogte-maat: 16px;
   }
 }
@@ -42,7 +40,6 @@ html {
   @media not (prefers-reduced-motion: reduce) {
     #wrap{
       opacity: 0;
-      min-height: 100%;
       transition: all 0.5s ease-out;
     }
     #loader {
@@ -76,31 +73,6 @@ html {
   }
 }
 
-.scratchblocks-inline{
-  /* svg element is too tall */
-  height: 3.5rem;
-}
-.doorhalen:before{
-  content: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="520px" height="120px" viewport="0 0 100 100" stroke="red" stroke-linecap="round" stroke-width="10px"><line x1="10" y1="90" x2="510" y2="10"/></svg>');
-  position: relative;
-  top: 60px;
-  z-index: 2;
-  /* filter: saturate(50%); */
-}
-.doorhalen > .scratchblocks{
-  margin-top: -100px;
-  margin-left: 1rem;
-  z-index: 1;
-  filter: saturate(50%);
-}
-.blocks,
-.codehilite {
-  overflow: auto hidden;
-}
-.blocks,
-.codehilite > pre {
-  line-height: 1.1;
-}
 body {
   color: var(--tekst-kleur);
   background-color: var(--achtergrond-kleur);
@@ -159,23 +131,24 @@ header, footer{
 body > header{
   justify-content: center;
 }
-/* body > footer{ */
-/*   position: fixed; */
-/*   bottom: 0px; */
-/* } */
 header > * {
   flex-shrink: 0;
   height: 50px;
+  flex-basis: content;
+}
+header svg{
+  max-width: 50px;
 }
 header svg text{
   font-size: 20px;
   font-family: DejaVu Sans, Georgia, sans-serif;
 }
-header svg#logo{
-  flex-basis: 50px;
-}
+header svg#logo text tspan,
 header svg#logo text{
   display: none;
+}
+header svg#logo text{
+  font-weight:  bold;
   font-stretch: ultra-condensed;
 }
 
@@ -216,11 +189,12 @@ footer > *{ align-self: end; }
   background: transparent url('scratch-gevorderd.svg') no-repeat 0 0;
 }
 
-body > main {
+#wrap {
   display: flex;
+  opacity: 0;
 }
 @supports (display:grid) {
- body > main {
+ #wrap {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: var(--hoogte-maat);
@@ -228,24 +202,32 @@ body > main {
     justify-items: stretch;
   }
 }
-body > main > a > *{
+ #wrap > a > *{
   margin: 0;
   text-align: right;
   color: inherit;
 }
-body > main > a:focus,
-body > main > a:active,
-body > main > a:hover{
+#wrap > a:focus,
+#wrap > a:active,
+#wrap > a:hover{
   text-decoration: none;
   filter: none;
-  color: black;
 }
-body > main > a{
-  color: #222;
+
+img.tile{
+  border: 4px solid transparent;
+}
+a:focus img.tile,
+a:active img.tile,
+a:hover img.tile{
+  border: 4px solid black;
+}
+#wrap > a{
+  color: black;
   min-width:  200px;
   min-height: 200px;
   outline: none;
-  filter: brightness(0.6);
+  filter: saturate(30%);
   offset-anchor: calc(var(--hoogte-maat) * -2);
   padding: calc(var(--hoogte-maat) * 1.5) 0.5rem;
   background-size:
@@ -272,12 +254,11 @@ h1 {
 h2 {
   font-size: 160%;
 }
-.preview {
+img {
   width: 100%;
   min-width:  100px;
   min-height: 100px;
   max-width:  540px;
-  object-fit: contain;
 }
 main {
   padding-left:  1rem;
@@ -285,25 +266,10 @@ main {
   min-height: calc(100vh - (var(--hoogte-maat) * 4) - 8rem);
 }
 
-blockquote{
-  width:     500px;
-  max-width: 100%;
-  margin:  1em 0 1em 0;
-  padding: 0 10px 100px 40px;
-  background: no-repeat bottom left/100px transparent url('scratch-basis.svg');
-}
-
-li{
-  line-height: 1.5;
-}
-ul{
-  list-style: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="28px" height="28px" fill="none" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m1 6c1.8.9 3.7 2.7 4.1 4.4.3-1.9.2-5.8 5.1-9" /></svg>') outside;
-}
 h1,h2,h3,h4{
   color: var(--opvallende-kleur);
 }
-code,
-a {
+code, a {
   padding: 0  0.2em;
   text-decoration: none;
 }
@@ -313,50 +279,35 @@ code{
 a {
   color: var(--link-kleur);
 }
-a.volgende{
-  text-align: center;
-  border:  2px solid var(--rand-kleur);
-  border-radius: 10px;
-  padding: 0.2rem 1rem;
-}
-a.volgende{
-  background-color: var(--achtergrond-kleur);
-}
-a.volgende:active{
-  background-color: var(--tekst-kleur);
-}
-a.volgende:active,
-a.volgende:hover{
-  border: 2px solid var(--tekst-kleur);
-}
 a:active,
 a:hover {
   text-decoration: underline;
 }
 
-@media screen and (min-width: 360px){
-  header svg#logo{
-    flex-basis: 240px;
+@media screen and (min-width: 280px){
+  header svg{
+    max-width: 170px;
   }
   header svg#logo text{
     display: initial;
   }
 }
 @media screen and (min-width: 500px){
+  header svg{
+    max-width: 240px;
+  }
+  header svg#logo text tspan{
+    display: initial;
+  }
   @supports (display:grid) {
-    body > main {
+    #wrap {
       grid-template-columns: 1fr 1fr;
     }
   }
 }
 @media screen and (min-width: 700px){
-  .blocks,
-  .codehilite {
-    margin: 2rem 0 2rem 2rem;
-    line-height: 1.2;
-  }
   @supports (display:grid) {
-    body > main {
+    #wrap {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
