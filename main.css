@@ -2,14 +2,6 @@
 * {
   box-sizing: inherit;
 }
-html {
-  margin: 0;
-  padding: 0;
-  overflow: hidden auto;
-  box-sizing: border-box;
-  text-rendering:  optimizeLegibility;
-  background-color: var(--achtergrond-cdj);
-}
 :root {
   --achtergrond-kleur: #fff;
   --achtergrond-cdj:   #00a4c9;
@@ -73,6 +65,14 @@ html {
   }
 }
 
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden auto;
+  box-sizing: border-box;
+  text-rendering:  optimizeLegibility;
+  background-color: var(--achtergrond-cdj);
+}
 body {
   color: var(--tekst-kleur);
   background-color: var(--achtergrond-kleur);
@@ -81,6 +81,7 @@ body {
 }
 body, header, #warn, footer{
   width: calc(100vw - 25px);
+  max-width: 840px;
 }
 #warn{
   display: none;
@@ -261,8 +262,8 @@ img {
   max-width:  540px;
 }
 main {
-  padding-left:  1rem;
-  padding-right: 1rem;
+  padding-left:  0.5rem;
+  padding-right: 0.5rem;
   min-height: calc(100vh - (var(--hoogte-maat) * 4) - 10rem);
 }
 
@@ -293,6 +294,10 @@ a:hover {
   }
 }
 @media screen and (min-width: 500px){
+  main {
+    padding-left:  1rem;
+    padding-right: 1rem;
+  }
   header svg{
     max-width: 240px;
   }
@@ -310,5 +315,12 @@ a:hover {
     #wrap {
       grid-template-columns: 1fr 1fr 1fr;
     }
+  }
+}
+
+@media screen and (min-width: 860px){
+  #naarBoven {
+    right: none;
+    left: calc(780px - 1rem);
   }
 }

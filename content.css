@@ -119,11 +119,11 @@ code.b.xxl > span{
     display: inline-block;
     margin: initial;
   }
+}
+@media screen and (min-width: 700px){
   img{
     width: auto;
   }
-}
-@media screen and (min-width: 700px){
   .blocks,
   .codehilite {
     margin: 2rem 0 2rem 2rem;
