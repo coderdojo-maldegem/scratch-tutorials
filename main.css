@@ -135,14 +135,15 @@ body > header{
 header > * {
   flex-shrink: 0;
   height: 50px;
-  flex-basis: content;
 }
-header svg{
-  max-width: 50px;
-}
+
 header svg text{
   font-size: 20px;
   font-family: DejaVu Sans, Georgia, sans-serif;
+}
+header svg{
+  max-width: 50px;
+  flex-basis: content;
 }
 header svg#logo text tspan,
 header svg#logo text{
@@ -170,22 +171,22 @@ header {
 header > *{ align-self: start; }
 footer > *{ align-self: end; }
 
-.basis {
+a.basis {
   background-color: var(--basis);
 }
-.ervaren {
+a.ervaren {
   background-color: var(--ervaren);
 }
-.gevorderd {
+a.gevorderd {
   background-color: var(--gevorderd);
 }
-.basis > h2{
+a.basis > h2{
   background: transparent url('scratch-basis.svg') no-repeat 0 0;
 }
-.ervaren > h2{
+a.ervaren > h2{
   background: transparent url('scratch-ervaren.svg') no-repeat 0 0;
 }
-.gevorderd > h2{
+a.gevorderd > h2{
   display: block;
   background: transparent url('scratch-gevorderd.svg') no-repeat 0 0;
 }
