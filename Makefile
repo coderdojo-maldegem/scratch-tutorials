@@ -7,6 +7,6 @@ all: $(patsubst %.md, %.html, $(MD_FILES))
 	$(info Running markdown_py on $< $@)
 	@cp -f head.html $@
 	@markdown_py -e UTF-8 $< >> $@
-	$(if $(findstring index.md,$<),@sed -i 's/^<p><img/<p align="center"><img/g' $@)
+	$(if $(findstring index.md,$<),@sed -f index.sed -i $@)
 	@sed -i '$$s/<p>\(.*\)<\/p>/\1/g;$$i\<\/main\>\<footer\>' $@
 	@cat tail.html >> $@
