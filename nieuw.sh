@@ -67,12 +67,14 @@ if [[ $name ]]; then
   done
   if [[ $input ]]; then
     mkdir -p "$name"/.tmp
-    mime="$(file -b --mime-type $input)"
+    mime=$(file -b --mime-type "$input")
     file="${input##*/}"
     if [[ $mime == "application/pdf" ]]; then
-      hash pdftotext && pdftotext "$input" "$name"/.tmp/${file%.*}.txt
-      hash pdfimages && pdfimages -png "$input" "$name"/.tmp/$name
+      hash pdftotext && echo "extracting text from $input" && pdftotext "$input" "$name"/.tmp/${file%.*}.txt
+      hash pdfimages && echo "extracting images from $input" && pdfimages -png "$input" "$name"/.tmp/$name
       [[ -f "$name"/.tmp/${file%.*}.txt ]] && sed -i '/^$/d;s/^/\n\n/g' "$name"/.tmp/${file%.*}.txt
+    else
+      >&2 echo "$input is not a pdf file" && exit 1
     fi
   fi
 else
