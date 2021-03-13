@@ -17,7 +17,7 @@ pages:
     - pip install markdown
     - pip install pygments
     - mkdir -p public
-    - cp -ru galgje pong flappybat memory dodgeball Makefile *.css *.html *.js img public
+    - cp -ru Makefile *.css *.html *.js */ public
     - cd public
     - make
   artifacts:
