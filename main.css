@@ -263,7 +263,7 @@ img {
 main {
   padding-left:  1rem;
   padding-right: 1rem;
-  min-height: calc(100vh - (var(--hoogte-maat) * 4) - 8rem);
+  min-height: calc(100vh - (var(--hoogte-maat) * 4) - 10rem);
 }
 
 h1,h2,h3,h4{
