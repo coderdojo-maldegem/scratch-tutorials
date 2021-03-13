@@ -1,7 +1,5 @@
 # Dodgeball
 
-Naar voorbeeld van CodeClub: <https://codeclub-project-assets.s3-eu-west-1.amazonaws.com/public/enGB/dodgeball.pdf>
-
 In dit spel moet je de ballen proberen ontwijken om zo de groene deur te bereiken!
 
 ![Er zijn 8 ballen te ontwijken in dit spel.
@@ -18,5 +16,7 @@ In dit project maak je kennis met de volgende concepten:
 * signalen
 
 Er zijn 12 stappen.
+
+<small>Naar voorbeeld van [CodeClub (pdf)](https://codeclub-project-assets.s3-eu-west-1.amazonaws.com/public/enGB/dodgeball.pdf)</small>
 
 [Terug](../) [Stap 1 →](1.html)

@@ -24,8 +24,14 @@ Er zijn vijf stappen.
 
 Elke stap bestaat uit een opdracht en uitleg over nieuwe blokken.
 
-<small>This work by Hasselt University is licensed under a Creative Commons AttributionNonCommercial-ShareAlike 4.0 International License. <http://creativecommons.org/licenses/by-nc-sa/4.0/></small>
+&nbsp;
 
-<p align="center"><frank.neven@uhasselt.be>, <wim.lamotte@uhasselt.be>, <jonny.daenen@uhasselt.be></p>
+<small>
+[Creative Commons AttributionNonCommercial-ShareAlike 4.0 International License.](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+</small>
+
+<small>
+&copy; <frank.neven@uhasselt.be>, <wim.lamotte@uhasselt.be>, <jonny.daenen@uhasselt.be>
+</small>
 
 [Terug](../) [Stap 1 →](1.html)
