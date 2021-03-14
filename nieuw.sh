@@ -51,28 +51,28 @@ shift $((OPTIND-1))
 [[ $1 == "--" ]] && shift
 [[ $number ]] || number=1
 
-[[ $# -ge 1 ]] && name="$1"
+[[ $# -ge 1 ]] && name="${@/ /-}"
 
 if [[ $name ]]; then
-  mkdir -p "$name"
-  echo -e "# $name\n\n![](../img/$name.png)\n\n[Terug](../) [Stap 1 →](1.html)" > "$name"/index.md
+  mkdir -p $name
+  echo -e "# ${name/-/ }\n\n![](../img/$name.png)\n\n[Terug](../) [Stap 1 →](1.html)" > $name/index.md
   for index in `seq $number`; do
     if (( index == number )); then
-      echo -e "# \n\n\n[← Stap $((index - 1))]($((index - 1)).html) [Terug](../)" > "$name"/$index.md
+      echo -e "# \n\n\n[← Stap $((index - 1))]($((index - 1)).html) [Terug](../)" > $name/$index.md
     elif (( index == 1 )); then
-      echo -e "# \n\n\n[Overzicht](index.html) [Stap $((index + 1)) →]($((index + 1)).html)" > "$name"/$index.md
+      echo -e "# \n\n\n[Overzicht](index.html) [Stap $((index + 1)) →]($((index + 1)).html)" > $name/$index.md
     else
-      echo -e "# \n\n\n[← Stap $((index - 1))]($((index - 1)).html) [Stap $((index + 1)) →]($((index + 1)).html)" > "$name"/$index.md
+      echo -e "# \n\n\n[← Stap $((index - 1))]($((index - 1)).html) [Stap $((index + 1)) →]($((index + 1)).html)" > $name/$index.md
     fi
   done
   if [[ $input ]]; then
-    mkdir -p "$name"/.tmp
+    mkdir -p $name/.tmp
     mime=$(file -b --mime-type "$input")
-    file="${input##*/}"
     if [[ $mime == "application/pdf" ]]; then
-      hash pdftotext && echo "extracting text from $input" && pdftotext "$input" "$name"/.tmp/${file%.*}.txt
-      hash pdfimages && echo "extracting images from $input" && pdfimages -png "$input" "$name"/.tmp/$name
-      [[ -f "$name"/.tmp/${file%.*}.txt ]] && sed -i '/^$/d;s/^/\n\n/g' "$name"/.tmp/${file%.*}.txt
+      cp "$input" $name/.tmp/$name.pdf
+      hash pdftotext && echo "extracting text from $name/.tmp/$name.pdf" && pdftotext $name/.tmp/$name.pdf $name/.tmp/$name.txt
+      hash pdfimages && echo "extracting images from $name/.tmp/$name.pdf" && pdfimages -png $name/.tmp/$name.pdf $name/.tmp/$name
+      [[ -f $name/.tmp/$name.txt ]] && sed -i '/^$/d;s/^/\n\n/g' $name/.tmp/$name.txt
     else
       >&2 echo "$input is not a pdf file" && exit 1
     fi
