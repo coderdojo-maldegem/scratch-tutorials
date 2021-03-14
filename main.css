@@ -10,9 +10,12 @@
   --code-kleur:  #c00;
   --tekst-kleur: #222;
   --opvallende-kleur: black;
-  --basis:       #30d4f9;
-  --ervaren:     firebrick;
-  --gevorderd:   darkgoldenrod;
+  /* starter */
+  --starter:   gold;
+  /* gevorderd */
+  --gevorderd: red;
+  /* expert */
+  --expert:    dodgerblue;
   --hoogte-maat: 16px;
   font-size-adjust: 1;
   font: var(--hoogte-maat)/2 DejaVu Sans, Georgia, sans-serif;
@@ -171,24 +174,24 @@ header {
 header > *{ align-self: start; }
 footer > *{ align-self: end; }
 
-a.basis {
-  background-color: var(--basis);
-}
-a.ervaren {
-  background-color: var(--ervaren);
+a.starter {
+  background-color: var(--starter);
 }
 a.gevorderd {
   background-color: var(--gevorderd);
 }
-a.basis > h2{
-  background: transparent url('scratch-basis.svg') no-repeat 0 0;
+a.expert {
+  background-color: var(--expert);
 }
-a.ervaren > h2{
-  background: transparent url('scratch-ervaren.svg') no-repeat 0 0;
+a.starter > h2{
+  background: transparent url('scratch-starter.svg') no-repeat 0 0;
 }
 a.gevorderd > h2{
-  display: block;
   background: transparent url('scratch-gevorderd.svg') no-repeat 0 0;
+}
+a.expert > h2{
+  display: block;
+  background: transparent url('scratch-expert.svg') no-repeat 0 0;
 }
 
 #wrap {

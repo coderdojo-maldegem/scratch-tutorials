@@ -1,8 +1,9 @@
 MD_FILES=$(wildcard */*/*.md)
 MD_FILES+=$(wildcard */*.md)
-flappybat/* : GRAAD=basis
-pong/* dodgeball/* : GRAAD=ervaren
-galgje/* memory/* klok/* : GRAAD=gevorderd
+
+GRAAD=starter
+pong/* dodgeball/* : GRAAD=gevorderd
+galgje/* memory/* klok/* : GRAAD=expert
 
 all: $(patsubst %.md, %.html, $(MD_FILES))
 
