@@ -16,12 +16,13 @@ pages:
     - source venv/bin/activate
     - pip install markdown
     - pip install pygments
-    - mkdir -p .public
-    - cp -ru Makefile *.sed *.svg *.css *.html *.js */ .public
-    - cd .public
+    - mkdir -p public
+    - cp -ru Makefile *.sed *.svg *.css *.html *.js public
+    - for dir in */; do [[ $dir == public/ ]] || cp -ru $dir public; done
+    - cd public
     - make
   artifacts:
     paths:
-      - .public
+      - public
   only:
     - main
