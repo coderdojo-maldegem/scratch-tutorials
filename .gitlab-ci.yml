@@ -2,8 +2,13 @@ image: python:latest
 
 variables:
   PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  GIT_STRATEGY: fetch
+  GIT_DEPTH: 1
 
-cache: {}
+cache:
+  paths:
+    - .cache/pip
+    - venv/
 
 pages:
   script:
@@ -11,16 +16,16 @@ pages:
     - virtualenv venv
     - source venv/bin/activate
     - pip install markdown
-    - pip install pygments
+    - make -j 3
     - mkdir -p public
-    - cp -ru Makefile *.sed *.svg *.css *.html *.js public
-    - for dir in */; do [[ $dir == public/ ]] || cp -ru $dir public; done
-    - cd public
-    - make
+    - cp -u *.svg *.css *.js index.html public
+    - for dir in */ ; do [[ $dir == public/ ]] || mkdir -p public/$dir; done
+    - for dir in */ ; do [[ $dir == public/ ]] || cp -u $dir/*.{png,html} public/$dir; done
+    - ls -l /usr/local/bin
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+      changes:
+        - index.html
   artifacts:
     paths:
       - public
-  only:
-    - main
-  # rules:
-  #   - if: '$(( $CI_JOB_ID % 5 - 1 )) == 0'
