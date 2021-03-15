@@ -26,6 +26,7 @@ pages:
     - if: '$CI_COMMIT_BRANCH == "main"'
       changes:
         - index.html
+        - .gitlab-ci.yml
   artifacts:
     paths:
       - public
