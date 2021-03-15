@@ -9,7 +9,7 @@ cache:
     - venv/
     - public/img
 
-install:
+pages:
   script:
     - pip install virtualenv
     - virtualenv venv
@@ -17,12 +17,6 @@ install:
     - pip install markdown
     - pip install pygments
     - mkdir -p public
-  only:
-    variables:
-      - $(( $CI_JOB_ID % 5 - 1 )) == 0
-
-pages:
-  script:
     - source venv/bin/activate
     - cp -ru Makefile *.sed *.svg *.css *.html *.js public
     - for dir in */; do [[ $dir == public/ ]] || cp -ru $dir public; done
@@ -35,3 +29,5 @@ pages:
       - public
   only:
     - main
+  # rules:
+  #   - if: '$(( $CI_JOB_ID % 5 - 1 )) == 0'
