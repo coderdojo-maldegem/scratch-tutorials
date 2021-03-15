@@ -20,7 +20,7 @@ pages:
     - mkdir -p public
     - cp -u *.svg *.css *.js index.html public
     - for dir in */ ; do [[ $dir == public/ ]] || mkdir -p public/$dir; done
-    - for dir in */ ; do [[ $dir == public/ ]] || cp -u $dir/*.{png,html} public/$dir; done
+    - for dir in */ ; do [[ $dir == public/ ]] || cp -u ${dir}*.{png,html} public/$dir; done
     - ls -l /usr/local/bin
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"'
