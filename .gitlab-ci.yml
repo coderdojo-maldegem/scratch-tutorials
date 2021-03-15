@@ -22,8 +22,6 @@ pages:
     - for dir in */; do [[ $dir == public/ ]] || cp -ru $dir public; done
     - cd public
     - make
-  dependencies:
-    - install
   artifacts:
     paths:
       - public
