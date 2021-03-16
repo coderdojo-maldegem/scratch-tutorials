@@ -323,6 +323,9 @@ a:hover {
 }
 
 @media screen and (min-width: 860px){
+  #loader {
+    margin-left: calc((840px - 140px)/2);
+  }
   #naarBoven {
     right: none;
     left: calc(780px - 1rem);
