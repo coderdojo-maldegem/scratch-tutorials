@@ -1,17 +1,19 @@
-MD_FILES=$(wildcard */*/*.md)
-MD_FILES+=$(wildcard */*.md)
+SOURCE=src/
+TARGET=public/
+MD_FILES=$(wildcard $(SOURCE)**/*.md)
 
 GRAAD=starter
-pong/* dodgeball/* : GRAAD=gevorderd
-galgje/* memory/* klok/* : GRAAD=expert
+$(TARGET)pong/* $(TARGET)dodgeball/* : GRAAD=gevorderd
+$(TARGET)galgje/* $(TARGET)memory/* $(TARGET)klok/* : GRAAD=expert
 
-all: $(patsubst %.md, %.html, $(MD_FILES))
+all: $(patsubst $(SOURCE)%.md, $(TARGET)%.html, $(MD_FILES))
 
-%.html: %.md head.html tail.html
+$(TARGET)%.html: $(SOURCE)%.md $(SOURCE)head.html $(SOURCE)tail.html
 	$(info Running markdown_py on $< $@)
-	@cp -f head.html $@
+	@mkdir -p $(dir $@)
+	@cp -f $(SOURCE)head.html $@
 	@markdown_py -e UTF-8 $< >> $@
-	$(if $(findstring index.md,$<),@sed -f index.sed -i $@)
+	$(if $(findstring index.md,$<),@sed -f $(SOURCE)index.sed -i $@)
 	@sed -i 's/<body>/<body class="${GRAAD}">/' $@
 	@sed -i '$$s/<p>\(.*\)<\/p>/\1/g;$$i\<\/main\>\<footer\>' $@
-	@cat tail.html >> $@
+	@cat $(SOURCE)tail.html >> $@

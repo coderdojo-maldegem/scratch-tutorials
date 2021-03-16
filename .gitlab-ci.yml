@@ -8,7 +8,8 @@ variables:
 cache:
   paths:
     - .cache/pip
-    - venv/
+    - venv
+    - public
 
 pages:
   script:
@@ -16,11 +17,7 @@ pages:
     - virtualenv venv
     - source venv/bin/activate
     - pip install markdown
-    - make -j 3
-    - mkdir -p public
-    - cp -u *.svg *.css *.js index.html public
-    - for dir in */ ; do [[ $dir == public/ ]] || mkdir -p public/$dir; done
-    - for dir in */ ; do [[ $dir == public/ ]] || cp -u ${dir}*.{png,html} public/$dir; done
+    - cd src && make -j 3
     - ls -l /usr/local/bin
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"'
