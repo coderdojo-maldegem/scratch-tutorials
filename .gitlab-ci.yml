@@ -3,13 +3,12 @@ image: python:latest
 variables:
   PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
   GIT_STRATEGY: fetch
-  GIT_DEPTH: 1
+  GIT_DEPTH: 2
 
 cache:
   paths:
     - .cache/pip
     - venv
-    - public
 
 pages:
   script:
@@ -19,7 +18,6 @@ pages:
     - pip install markdown
     - pip install markdown-checklist
     - make -j 3
-    - ls -l /usr/local/bin
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"'
       changes:

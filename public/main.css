@@ -327,7 +327,7 @@ a:hover {
     margin-left: calc((840px - 140px)/2);
   }
   #naarBoven {
-    right: none;
+    right: unset;
     left: calc(780px - 1rem);
   }
 }
