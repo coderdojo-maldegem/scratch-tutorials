@@ -14,11 +14,11 @@ Voer het programma zelf eens uit!
 
 In dit project maak je kennis met de volgende concepten:
 
-* x- en y-coördinaten
-* herhalingen en condities
-* uiterlijk van een sprite aanpassen
-* botsingen detecteren
-* variabelen gebruiken
+* [x] x- en y-coördinaten
+* [x] herhalingen en condities
+* [x] uiterlijk van een sprite aanpassen
+* [x] botsingen detecteren
+* [x] variabelen gebruiken
 
 Er zijn vijf stappen.
 

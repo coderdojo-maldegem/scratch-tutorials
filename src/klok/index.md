@@ -8,10 +8,10 @@ Met een moderne computer een ouderwetse (analoge) klok tonen, dat is pas grappig
 
 Onze klok bevat:
 
-- drie wijzers: voor de uren, minuten en seconden
-- een wijzerplaat met streepjes
-- een knop om een alarmtijd in te stellen
-- een grappige sprite die elk uur tevoorschijn komt. Zoals in een koekoeksklok.
+* [x] drie wijzers: voor de uren, minuten en seconden
+* [x] een wijzerplaat met streepjes
+* [x] een knop om een alarmtijd in te stellen
+* [x] een grappige sprite die elk uur tevoorschijn komt. Zoals in een koekoeksklok.
 
 &nbsp;
 

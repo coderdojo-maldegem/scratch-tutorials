@@ -7,10 +7,10 @@ alt="Het spel memory. Op een witte achtergrond staan plaatjes door elkaar in een
 
 Dit spel gebruikt:
 
-- clones
-- variabelen
-- lijsten
-- signalen
-- zelfgemaakte blokjes
+* [x] clones
+* [x] variabelen
+* [x] lijsten
+* [x] signalen
+* [x] zelfgemaakte blokjes
 
 [Terug](../) [Stap 1 →](1.html)

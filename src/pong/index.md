@@ -11,10 +11,10 @@ De beste manier om met Pong vertrouwd te raken is het eerst zelf te spelen!
 
 In dit project maak je kennis met de volgende concepten:
 
-* x- en y-coördinaten, richting van een sprite
-* genereren van willekeurige getallen
-* variabelen, condities, herhaling, als-dan-test
-* klonen, signalen, tijdklok, eigen blokken
+* [x] x- en y-coördinaten, richting van een sprite
+* [x] genereren van willekeurige getallen
+* [x] variabelen, condities, herhaling, als-dan-test
+* [x] klonen, signalen, tijdklok, eigen blokken
 
 Er zijn zes stappen.
 Elke stap bestaat uit een opdracht en uitleg over nieuwe blokken.

@@ -9,11 +9,11 @@ Er zijn nog twee verdiepingen, en de groene deur die we willen bereiken is recht
 
 In dit project maak je kennis met de volgende concepten:
 
-* x- en y-coördinaten, richting van een sprite
-* genereren van willekeurige getallen
-* variabelen, condities, herhaling, als-dan-test
-* klonen
-* signalen
+* [x] x- en y-coördinaten, richting van een sprite
+* [x] genereren van willekeurige getallen
+* [x] variabelen, condities, herhaling, als-dan-test
+* [x] klonen
+* [x] signalen
 
 Er zijn 12 stappen.
 

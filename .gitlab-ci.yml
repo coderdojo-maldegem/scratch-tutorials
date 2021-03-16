@@ -17,6 +17,7 @@ pages:
     - virtualenv venv
     - source venv/bin/activate
     - pip install markdown
+    - pip install markdown-checklist
     - make -j 3
     - ls -l /usr/local/bin
   rules:

@@ -4,9 +4,9 @@
 
 Dit spel gebruikt:
 
-- clones
-- variabelen
-- lijsten
-- signalen
+* [x] clones
+* [x] variabelen
+* [x] lijsten
+* [x] signalen
 
 [Terug](../) [Stap 1 →](1.html)
