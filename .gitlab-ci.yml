@@ -17,7 +17,7 @@ pages:
     - virtualenv venv
     - source venv/bin/activate
     - pip install markdown
-    - cd src && make -j 3
+    - make -j 3
     - ls -l /usr/local/bin
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"'
