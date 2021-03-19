@@ -1,10 +1,12 @@
 SOURCE=src/
 TARGET=public/
 MD_FILES=$(wildcard $(SOURCE)**/*.md)
+GEVORDERD=pong dodgeball
+EXPERT=simon galgje memory klok
 
 GRAAD=starter
-$(TARGET)pong/* $(TARGET)dodgeball/* : GRAAD=gevorderd
-$(TARGET)galgje/* $(TARGET)memory/* $(TARGET)klok/* : GRAAD=expert
+$(patsubst %, $(TARGET)%/*, $(GEVORDERD)) : GRAAD=gevorderd
+$(patsubst %, $(TARGET)%/*, $(EXPERT)) : GRAAD=expert
 
 all: $(patsubst $(SOURCE)%.md, $(TARGET)%.html, $(MD_FILES))
 
