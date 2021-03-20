@@ -50,12 +50,37 @@ fi
 shift $((OPTIND-1))
 [[ $1 == "--" ]] && shift
 [[ $number ]] || number=1
+(( number < 2 )) || stappen="" \
+  && stappen="Er zijn $number stappen.\nElke stap bestaat uit een opdracht en uitleg over nieuwe blokken."
 
 [[ $# -ge 1 ]] && name="${@/ /-}"
 
 if [[ $name ]]; then
   mkdir -p $name
-  echo -e "# ${name/-/ }\n\n![](../img/$name.png)\n\n[Terug](../) [Stap 1 →](1.html)" > $name/index.md
+  cat <<EOF > $name/index.md
+# ${name/-/ }\n\n![](../img/$name.png)
+
+In dit project maak je kennis met de volgende concepten:
+
+* [x] x- en y-coördinaten, richting van een sprite
+* [x] genereren van willekeurige getallen
+* [x] variabelen, condities, herhaling, als-dan-test
+* [x] klonen, signalen, eigen blokken
+
+$stappen
+
+&nbsp;
+
+<small>
+[Creative Commons AttributionNonCommercial-ShareAlike 4.0 International License.](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+</small>
+
+<small>
+&copy;
+</small>
+
+[Terug](../) [Stap 1 →](1.html)
+EOF
   for index in `seq $number`; do
     if (( index == number )); then
       echo -e "# \n\n\n[← Stap $((index - 1))]($((index - 1)).html) [Terug](../)" > $name/$index.md
