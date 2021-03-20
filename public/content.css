@@ -53,9 +53,6 @@ li img{
   margin: 0.5em 0;
   width: auto!important;
 }
-/* ul{ */
-/*   list-style: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="28px" height="28px" fill="none" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m1 6c1.8.9 3.7 2.7 4.1 4.4.3-1.9.2-5.8 5.1-9" /></svg>') outside; */
-/* } */
 ul.checklist{
   list-style: none;
 }
