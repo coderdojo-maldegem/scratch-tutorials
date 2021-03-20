@@ -23,6 +23,8 @@ pages:
       changes:
         - index.html
         - .gitlab-ci.yml
+        - src/*.html
+        - src/**/*.md
   artifacts:
     paths:
       - public
