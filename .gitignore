@@ -13,4 +13,5 @@ src/*
 !src/nieuw.sh
 !src/**/
 !src/**/*.md
-tmp
+.tmp/
+**/.tmp
