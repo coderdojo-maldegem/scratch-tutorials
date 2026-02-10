@@ -5,23 +5,24 @@
 }
 
 :root {
-  --achtergrond-kleur: #fff;
+  --achtergrond-kleur: white;
   --achtergrond-cdj: #00a4c9;
   --rand-kleur: #ddd;
   --link-kleur: #0060a0;
   --code-kleur: #557;
-  --code-achtergrond-kleur: #557;
+  --code-achtergrond-kleur: white;
   --tekst-kleur: #222;
   --opvallende-kleur: black;
+  --venster-breedte: 750px;
   /* starter */
   --starter: gold;
   /* gevorderd */
   --gevorderd: red;
   /* expert */
   --expert: dodgerblue;
-  --hoogte-maat: 20px;
+  --hoogte-maat: 24px;
   font-size-adjust: 1;
-  font: var(--hoogte-maat)/2 DejaVu Sans, Georgia, sans-serif;
+  font: 500 var(--hoogte-maat)/2 Helevetica Neue, Helvetica, sans-serif;
 }
 
 @media screen and (prefers-color-scheme: dark) {
@@ -84,7 +85,7 @@
 html {
   margin: 0;
   padding: 0;
-  overflow: hidden auto;
+  overflow: hidden;
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
   background-color: var(--achtergrond-cdj);
@@ -97,12 +98,23 @@ body {
   margin: 0 0 0 5px;
 }
 
+html,
+body {
+  height: 100vh;
+}
+
+main {
+  /* TODO: calculate */
+  height: calc(100vh - 188px);
+  overflow-y: scroll;
+}
+
 body,
 header,
 #warn,
 footer {
   width: calc(100vw - 25px);
-  max-width: 840px;
+  max-width: var(--venster-breedte);
 }
 
 #warn {
@@ -112,7 +124,8 @@ footer {
 }
 
 #naarBoven {
-  right: 1rem;
+  left: calc(var(--venster-breedte) - 65px);
+  /* right: 1rem; */
   bottom: calc((var(--hoogte-maat) * 2) + 50px + 1rem);
   width: 60px;
   height: 60px;
@@ -274,8 +287,8 @@ a:hover img.tile {
 
 #wrap>a {
   color: black;
-  min-width: 200px;
-  min-height: 200px;
+  min-width: 170px;
+  min-height: 170px;
   outline: none;
   filter: saturate(30%);
   offset-anchor: calc(var(--hoogte-maat) * -2);
@@ -299,11 +312,11 @@ a:hover img.tile {
 
 h1 {
   text-align: center;
-  font-size: 200%;
+  font-size: 190%;
 }
 
 h2 {
-  font-size: 160%;
+  font-size: 140%;
 }
 
 img {
@@ -326,18 +339,35 @@ h4 {
   color: var(--opvallende-kleur);
 }
 
-code,
-a {
-  padding: 0 0.2em;
-  text-decoration: none;
+details {
+  margin: 1em 0;
+  display: inline-block;
 }
 
-:not(pre)>code {
+details>summary {
+  color: var(--opvallende-kleur);
+  background-color: var(--achtergrond-cdj);
+  border: 1px solid gray;
+  border-radius: 16px;
+  padding: 0.5em 1em;
+}
+
+code,
+a {
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+pre {
+  overflow-x: scroll;
+}
+
+:not(pre)>code:not(.b) {
   color: var(--code-kleur);
   background-color: var(--code-achtergrond-kleur);
   border: 1px solid gray;
   border-radius: 16px;
-  padding: 0.5em;
+  padding: 0.4em 0.6em;
 }
 
 a {
@@ -359,7 +389,7 @@ a:hover {
   }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 400px) {
   main {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -380,7 +410,8 @@ a:hover {
   }
 }
 
-@media screen and (min-width: 700px) {
+
+@media screen and (min-width: var(--venster-breedte)) {
   @supports (display:grid) {
     #wrap {
       grid-template-columns: 1fr 1fr 1fr;
@@ -391,10 +422,5 @@ a:hover {
 @media screen and (min-width: 860px) {
   #loader {
     margin-left: calc((840px - 140px)/2);
-  }
-
-  #naarBoven {
-    right: unset;
-    left: calc(780px - 1rem);
   }
 }

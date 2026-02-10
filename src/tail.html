@@ -13,10 +13,11 @@ scratchblocks.renderMatching("code.b", {
 
 (function () {
   const knop = document.getElementById("naarBoven")
+  const main = document.getElementsByTagName('main')[0]
   const naarBoven = () => {
     let isAanTScrollen = false
     let isAanTScrollenTimeout
-    addEventListener(
+    main.addEventListener(
       "wheel",
       () => {
         isAanTScrollen = true
@@ -28,14 +29,14 @@ scratchblocks.renderMatching("code.b", {
       { passive: true }
     )
 
-    const c = document.documentElement.scrollTop || document.body.scrollTop
+    const c = main.scrollTop
     if (!isAanTScrollen && c > 0) {
       requestAnimationFrame(naarBoven)
-      scrollTo(0, c - c / 8)
+      main.scrollTo(0, c - c / 8)
     }
   }
-  addEventListener("scroll", () => {
-    knop.classList[window.scrollY > 750 ? "add" : "remove"](
+  main.addEventListener("scroll", () => {
+    knop.classList[main.scrollTop > 500 ? "add" : "remove"](
       "zichtbaar"
     )
   })
