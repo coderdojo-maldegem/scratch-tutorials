@@ -12,11 +12,9 @@ cache:
 
 pages:
   script:
-    - pip install virtualenv
-    - virtualenv venv
+    - python -m venv venv
     - source venv/bin/activate
-    - pip install markdown
-    - pip install markdown-checklist
+    - pip install markdown markdown-checklist
     - make -j 3
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"'

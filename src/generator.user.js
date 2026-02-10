@@ -14,7 +14,7 @@
   'use strict';
   let id = getUrllets()["id"].replace(/^\/|\/$/g, '');
   let fullUrl = "https://projects.scratch.mit.edu/" + id;
-  let blockMapUrl = "https://gitlab.com/cdjeeklo/scratch/-/raw/main/src/blockdata.js"
+  let blockMapUrl = "https://gitlab.com/coderdojo-maldegem/scratch/-/raw/main/src/blockdata.js"
   let derpyList = "";
   let blockMap;
   let blockData;
