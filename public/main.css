@@ -6,7 +6,8 @@
 
 :root {
   --achtergrond-kleur: white;
-  --achtergrond-cdj: #00a4c9;
+  --achtergrond-cdj: hsla(215, 100%, 95%, 1);
+  /* #00a4c9; */
   --rand-kleur: #ddd;
   --link-kleur: #0060a0;
   --code-kleur: #557;
@@ -38,7 +39,7 @@
 
 @media screen {
   @media not (prefers-reduced-motion: reduce) {
-    #wrap {
+    main {
       opacity: 0;
       transition: all 0.5s ease-out;
     }
@@ -94,8 +95,8 @@ html {
 body {
   color: var(--tekst-kleur);
   background-color: var(--achtergrond-kleur);
-  overflow-y: hidden;
-  margin: 0 0 0 5px;
+  overflow: hidden;
+  margin: 0 5px;
 }
 
 html,
@@ -109,16 +110,9 @@ main {
   overflow-y: scroll;
 }
 
-body,
-header,
-#warn,
-footer {
-  width: calc(100vw - 25px);
-  max-width: var(--venster-breedte);
-}
-
 #warn {
   display: none;
+  width: 100%;
   background-color: darksalmon;
   padding: 1rem;
 }
@@ -247,13 +241,13 @@ a.expert>h2 {
   background: transparent url('scratch-expert.svg') no-repeat 0 0;
 }
 
-#wrap {
-  display: flex;
+main {
+  /* display: flex; */
   opacity: 0;
 }
 
 @supports (display:grid) {
-  #wrap {
+  #wrap main {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: var(--hoogte-maat);
@@ -262,15 +256,15 @@ a.expert>h2 {
   }
 }
 
-#wrap>a>* {
+#wrap main>a>* {
   margin: 0;
   text-align: right;
   color: inherit;
 }
 
-#wrap>a:focus,
-#wrap>a:active,
-#wrap>a:hover {
+#wrap main>a:focus,
+#wrap main>a:active,
+#wrap main>a:hover {
   text-decoration: none;
   filter: none;
 }
@@ -285,7 +279,7 @@ a:hover img.tile {
   border: 4px solid black;
 }
 
-#wrap>a {
+#wrap main>a {
   color: black;
   min-width: 170px;
   min-height: 170px;
@@ -404,16 +398,16 @@ a:hover {
   }
 
   @supports (display:grid) {
-    #wrap {
+    #wrap main {
       grid-template-columns: 1fr 1fr;
     }
   }
 }
 
 
-@media screen and (min-width: var(--venster-breedte)) {
+@media screen and (min-width: 700px) {
   @supports (display:grid) {
-    #wrap {
+    #wrap main {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }

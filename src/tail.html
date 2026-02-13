@@ -1,3 +1,4 @@
+
 </footer>
 </article>
 <script>
@@ -11,6 +12,10 @@ scratchblocks.renderMatching("code.b", {
   inline: true
 });
 
+window.addEventListener('load', () => {
+  document.getElementById('loader').style.display = 'none';
+  document.getElementsByTagName('main')[0].style.opacity = '1';
+});
 (function () {
   const knop = document.getElementById("naarBoven")
   const main = document.getElementsByTagName('main')[0]
@@ -44,4 +49,3 @@ scratchblocks.renderMatching("code.b", {
 })();
 </script>
 </body>
-</html>

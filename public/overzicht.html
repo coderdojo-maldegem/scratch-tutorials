@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head lang="nl">
+  <meta charset="UTF-8">
+  <meta name="color-scheme" content="dark light">
+  <title>CoderDojo Maldegem Scratch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Bart De Roy">
+  <meta name="description" content="This page presents Scratch tutorials
+    and game creation challenges from our CoderDojo in Eelko, Belgium">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon-precomposed" href="https://coderdojo-maldegem.gitlab.io/scratch/img/coderdojo.png">
+  <meta property="og:image" content="https://cdjeeklo.gitlab.io/scratch/img/coderdojo.png">
+  <meta property="og:description" content="Scratch tutorials and game creation challenges from CoderDojo in Eelko, Belgium">
+  <meta property="og:title" content="CoderDojo Maldegem Scratch">
+  <meta name="twitter:title" content="CoderDojo Maldegem Scratch">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body id="wrap">
+  <article>
+    <header>
+      <!-- viewBox="0 0 250 50" --> 
+      <svg id="logo" height="50px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path fill="black" d="M21,15.5V6.6c0-0.8,0.6-1.4,1.4-1.4H27c0.4,0,0.7,0.1,1,0.4c0.3,0.3,0.4,0.6,0.4,1v8.8c0,0.8-0.6,1.4-1.4,1.4
+          l0,0h-4.6C21.6,16.9,21,16.3,21,15.5C21,15.5,21,15.5,21,15.5L21,15.5L21,15.5z M27,15.4V6.7h-4.5v8.7C22.5,15.4,27,15.4,27,15.4z
+          M25,0C11.2,0,0,11.2,0,25s11.2,25,25,25s25-11.2,25-25S38.8,0,25,0z M29.4,42.9c0,0.4-0.3,0.7-0.7,0.7c0,0,0,0,0,0h-6
+          c-0.2,0-0.4-0.1-0.5-0.2c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.4,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H25v-8.7h-2.2
+          c-0.4,0-0.7-0.3-0.7-0.7c0-0.4,0.3-0.7,0.7-0.7h3.7v10.2h1.5v-3.1c0-0.4,0.3-0.8,0.7-0.8c0.4,0,0.8,0.3,0.8,0.7c0,0,0,0,0,0.1V42.9
+          L29.4,42.9z M24.7,25c-6.5,0-11.8,5.4-11.8,11.9c0,6.4,5.1,11.6,11.5,11.8C11.3,48.7,0.7,38.1,0.7,25c0-13.1,10.6-23.7,23.7-23.7
+          c0.1,0,0.2,0,0.4,0c6.5-0.1,11.9,5.1,12,11.7c0.1,6.5-5.1,11.9-11.7,12C25,25,24.9,25,24.7,25z"/>
+        <text x="55" y="32">CoderDojo<tspan style="font-weight: lighter;">Belgium</tspan></text>
+      </svg>
+    </header>
+    <div id="loader"></div>
+    <main>
+      <a class="starter" href="vangspel" hreflang="nl"><h2>Vang Het!</h2><small>starter</small>
+        <img class="tile"
+          src="img/vangspel.png"
+          alt="Het vang spel heeft een uitzicht op een baai op zee.
+          Er is één appel in de lucht en één in een kom.
+          In het midden staat de tekst 'you win!'.
+          Bovenaan is een score variabele weergegeven met de waarde 10."/>
+      </a>
+      <a class="starter" href="flappybat" hreflang="nl"><h2>Flappy Bat</h2><small>starter</small>
+        <img class="tile"
+          src="img/flappybat.png"
+          alt="In het Flappy Bat spel is een vleermuis die door een griezelig
+          bos vliegt. We zien een dwarsdoorsnede van een muur met een gat
+          waartussen de vleermuis moet proberen vliegen. Links bovenaan is de
+          score variabele weergegeven met de waarde 2."/>
+      </a>
+      <a class="gevorderd" href="dodgeball" hreflang="nl"><h2>Dodgeball</h2><small>gevorderd</small>
+        <img class="tile"
+          src="img/dodgeball.png"
+          alt="
+          Er zijn 8 ballen te ontwijken in dit spel. Het te besturen personage
+          staat links onderaan op het gelijkvloers. Er zijn nog twee
+          verdiepingen, en de groene deur die we willen bereiken is rechts
+          bovenaan."/>
+      </a>
+      <a class="gevorderd" href="pong" hreflang="nl"><h2>Pong</h2><small>gevorderd</small>
+        <img class="tile"
+          src="img/pong.png"
+          alt="Het pong spel heeft een rode vloer, het pallet (de plank) is
+          blauw, de achtergrond is wit en in de bovenhoeken is het geel. Links
+          onderaan is de score variabele weergegeven met de waarde 19."/>
+      </a>
+      <a class="expert" id="galgje" href="galgje" hreflang="nl"><h2>Galgje</h2><small>expert</small>
+        <img class="tile"
+          src="img/galgje.png"
+          alt="Op een veld staat een tekening van een ventje dat aan de galg
+          hangt. Op de grond liggen de letters U, I, E, E en A. In de lucht
+          staan de letters L, L, K, K, R, L, N en D."/>
+      </a>
+      <a class="expert" id="memory" href="memory" hreflang="nl"><h2>Memory</h2><small>expert</small>
+        <img class="tile"
+          src="img/memory.png"
+          alt="Het spel memory. Op een witte achtergrond staan plaatjes door
+          elkaar in een rooster. Er zijn telkens twee plaatjes van dezelfde
+          figuur. Links bovenaan staat een variabele kaarten te gaan met de
+          waarde 24."/>
+      </a>
+      <a class="expert" id="klok" href="klok" hreflang="nl"><h2>Analoge klok</h2><small>expert</small>
+        <img class="tile"
+          src="img/klok.png"
+          alt="Op een witte achtergrond staat een ronde analoge klok met drie wijzers.
+          De wijzerplaat heeft geen nummers en langere streepjes om het uur aan te duiden.
+          Links bovenaan staan de variabelen alarm uur en alarm minuten allebei met de waarde 0.
+          Links onder staat een knop zet alarm."/>
+      </a>
+    </main>
+    <footer><time datetime="2021-03-20">2021-03-20</time> <span>Maldegem</span></footer>
+  </article>
+  <script>
+  window.addEventListener('load', () => {
+    document.getElementById('loader').style.display = 'none';
+    document.getElementsByTagName('main')[0].style.opacity = '1';
+  });
+  </script>
+</body>
