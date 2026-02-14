@@ -13,14 +13,10 @@ Onze klok bevat:
 * [x] een knop om een alarmtijd in te stellen
 * [x] een grappige sprite die elk uur tevoorschijn komt. Zoals in een koekoeksklok.
 
-&nbsp;
-
-<small>
-[Creative Commons AttributionNonCommercial-ShareAlike 4.0 International License.](http://creativecommons.org/licenses/by-nc-sa/4.0/)
-</small>
-
-<small>
-&copy; 2017 CoderDojo Sint Niklaas. Met dank aan CoderDojo Vorselaar voor het idee.
-</small>
+&copy; [by-nc-sa](http://creativecommons.org/licenses/by-nc-sa/4.0/)<br>
+frank.neven@uhasselt.be,<br>
+wim.lamotte@uhasselt.be,<br>
+jonny.daenen@uhasselt.be,<br>
+de.roy.bart@gmail.com
 
 [Terug](../) [Stap 1 →](1.html)

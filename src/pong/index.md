@@ -19,14 +19,9 @@ In dit project maak je kennis met de volgende concepten:
 Er zijn zes stappen.
 Elke stap bestaat uit een opdracht en uitleg over nieuwe blokken.
 
-&nbsp;
-
-<small>
-[Creative Commons AttributionNonCommercial-ShareAlike 4.0 International License.](http://creativecommons.org/licenses/by-nc-sa/4.0/)
-</small>
-
-<small>
-&copy; <frank.neven@uhasselt.be>, <wim.lamotte@uhasselt.be>, <jonny.daenen@uhasselt.be>
-</small>
+&copy; [by-nc-sa](http://creativecommons.org/licenses/by-nc-sa/4.0/)<br>
+frank.neven@uhasselt.be,<br>
+wim.lamotte@uhasselt.be,<br>
+jonny.daenen@uhasselt.be
 
 [Terug](../) [Stap 1 →](1.html)

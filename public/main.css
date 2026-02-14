@@ -14,7 +14,6 @@
   --code-achtergrond-kleur: white;
   --tekst-kleur: #222;
   --opvallende-kleur: black;
-  --venster-breedte: 750px;
   /* starter */
   --starter: gold;
   /* gevorderd */
@@ -23,19 +22,19 @@
   --expert: dodgerblue;
   --hoogte-maat: 24px;
   font-size-adjust: 1;
-  font: 500 var(--hoogte-maat)/2 Helevetica Neue, Helvetica, sans-serif;
+  font: 500 var(--hoogte-maat)/1.8 Helevetica Neue, Helvetica, sans-serif;
 }
 
-@media screen and (prefers-color-scheme: dark) {
-  :root {
-    --achtergrond-kleur: black;
-    --rand-kleur: #444;
-    --link-kleur: #30bfff;
-    --tekst-kleur: #eee;
-    --opvallende-kleur: white;
-    --hoogte-maat: 16px;
-  }
-}
+/* @media screen and (prefers-color-scheme: dark) { */
+/*   :root { */
+/*     --achtergrond-kleur: black; */
+/*     --rand-kleur: #444; */
+/*     --link-kleur: #30bfff; */
+/*     --tekst-kleur: #eee; */
+/*     --opvallende-kleur: white; */
+/*     --hoogte-maat: 16px; */
+/*   } */
+/* } */
 
 @media screen {
   @media not (prefers-reduced-motion: reduce) {
@@ -86,7 +85,7 @@
 html {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
   background-color: var(--achtergrond-cdj);
@@ -95,7 +94,7 @@ html {
 body {
   color: var(--tekst-kleur);
   background-color: var(--achtergrond-kleur);
-  overflow: hidden;
+  /* overflow: hidden; */
   margin: 0 5px;
 }
 
@@ -106,7 +105,7 @@ body {
 
 main {
   /* TODO: calculate */
-  height: calc(100vh - 188px);
+  /* height: calc(100vh - 100px); */
   overflow-y: scroll;
 }
 
@@ -118,7 +117,7 @@ main {
 }
 
 #naarBoven {
-  left: calc(var(--venster-breedte) - 65px);
+  left: calc(100vw - 65px);
   /* right: 1rem; */
   bottom: calc((var(--hoogte-maat) * 2) + 50px + 1rem);
   width: 60px;
@@ -146,6 +145,13 @@ main {
 iframe {
   border: none;
   object-fit: contain;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 header,
@@ -193,7 +199,7 @@ header svg#logo text {
 }
 
 footer {
-  background-image: linear-gradient(135deg, var(--achtergrond-kleur) 0%, var(--achtergrond-kleur) 50%, transparent 50%, transparent 100%), linear-gradient(-135deg, var(--achtergrond-kleur) 0%, var(--achtergrond-kleur) 50%, transparent 50%, transparent 100%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(135deg, var(--achtergrond-kleur) 0%, var(--achtergrond-kleur) 50%, transparent 50%, transparent 100%), linear-gradient(-135deg, var(--achtergrond-kleur) 0%, var(--achtergrond-kleur) 50%, transparent 50%, transparent 100%), linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
   /* chromium: small misalignment when using center in stead of left */
   background-position: top left, top left, top left;
   padding-top: calc(var(--hoogte-maat) * 2);
@@ -201,7 +207,7 @@ footer {
 }
 
 header {
-  background-image: linear-gradient(45deg, var(--achtergrond-kleur) 0%, var(--achtergrond-kleur) 50%, transparent 50%, transparent 100%), linear-gradient(-45deg, var(--achtergrond-kleur) 0%, var(--achtergrond-kleur) 50%, transparent 50%, transparent 100%), linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(45deg, var(--achtergrond-kleur) 0%, var(--achtergrond-kleur) 50%, transparent 50%, transparent 100%), linear-gradient(-45deg, var(--achtergrond-kleur) 0%, var(--achtergrond-kleur) 50%, transparent 50%, transparent 100%), linear-gradient(to top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
   /* chromium: small misalignment when using center in stead of left */
   background-position: bottom left, bottom left, bottom left;
   padding-bottom: calc(var(--hoogte-maat) * 2);
@@ -259,6 +265,7 @@ main {
 #wrap main>a>* {
   margin: 0;
   text-align: right;
+  line-height: 2;
   color: inherit;
 }
 
@@ -282,7 +289,6 @@ a:hover img.tile {
 #wrap main>a {
   color: black;
   min-width: 170px;
-  min-height: 170px;
   outline: none;
   filter: saturate(30%);
   offset-anchor: calc(var(--hoogte-maat) * -2);
@@ -306,11 +312,15 @@ a:hover img.tile {
 
 h1 {
   text-align: center;
-  font-size: 190%;
+  font-size: 140%;
 }
 
 h2 {
-  font-size: 140%;
+  font-size: 120%;
+}
+
+h3 {
+  font-size: 100%;
 }
 
 img {
@@ -323,7 +333,7 @@ img {
 main {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  min-height: calc(100vh - (var(--hoogte-maat) * 4) - 10rem);
+  /* min-height: calc(100vh - (var(--hoogte-maat) * 4) - 10rem); */
 }
 
 h1,
@@ -362,6 +372,7 @@ pre {
   border: 1px solid gray;
   border-radius: 16px;
   padding: 0.4em 0.6em;
+  font-size: 80%;
 }
 
 a {
@@ -405,15 +416,13 @@ a:hover {
 }
 
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 860px) {
   @supports (display:grid) {
     #wrap main {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
-}
 
-@media screen and (min-width: 860px) {
   #loader {
     margin-left: calc((840px - 140px)/2);
   }

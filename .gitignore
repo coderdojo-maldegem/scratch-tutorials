@@ -14,3 +14,5 @@
 !src/nieuw.sh
 !src/**/
 !src/**/*.md
+!sb3
+!sb3/*.sb3
