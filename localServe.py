@@ -3,7 +3,7 @@ import subprocess as sub
 
 class Handler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, directory=".", **kwargs)
+        super().__init__(*args, directory="public", **kwargs)
 
     def send_response_only(self, code, message=None):
         super().send_response_only(code, message)

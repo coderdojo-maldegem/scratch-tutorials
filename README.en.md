@@ -32,7 +32,7 @@ $ pip install markdown markdown-checklist
 $ make
 Running markdown_py on galgje/1/stap1.md galgje/1/stap1.html
 ...
-$ python localServe.py public
+$ python localServe.py
 ```
 
 The localServe.py script will try to spawn Firefox. Change it if you want to use a different browser.
