@@ -29,7 +29,8 @@ blockquote {
   padding: 0.5em 1em;
   position: relative;
   color: black;
-  background: orange linear-gradient(#f9d835, orange);
+  background: white;
+  border: 5px solid gray;
   border-radius: 1em;
 }
 
@@ -38,7 +39,7 @@ blockquote:after {
   position: absolute;
   bottom: -128px;
   left: 30px;
-  background-image: url('scratch-starter.svg'), url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="orange" stroke="none"><path d="M 0 15 q 14 -10 20 -20 l -5 0 q -7 15 -15 20"/></svg>');
+  background-image: url('scratch-starter.svg'), url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" stroke="gray"><path d="M 0 15 q 14 -10 20 -20 l -5 0 q -7 15 -15 20"/></svg>');
   background-position: bottom 24px left, top right;
   background-size: 64px;
   background-repeat: no-repeat;
