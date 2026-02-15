@@ -20,7 +20,7 @@ The resulting pages are then copied and hosted.
 
 If you want to build the pages locally, you'll need the above programs.
 
-Notice that: each command line is indicated with "$" by convention (you should remove "$").
+Notice that: each command line is indicated with a dollar sign by convention (you should remove "$").
 
 ```sh
 $ git clone https://gitlab.com/coderdojo-maldegem/scratch.git

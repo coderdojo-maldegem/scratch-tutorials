@@ -20,7 +20,7 @@ Telkens als die verandert, zal Gitlab de markdown pagina's in html omzetten en h
 
 Enkel als je de html pagina's plaatselijk wil genereren, heb de bovenstaande programma's nodig.
 
-Merk op: elke regel die met "$" begint is een opdrachtregel (laat "$" weg).
+Merk op: elke regel die met een dollar teken begint is een opdrachtregel (laat "$" weg).
 
 ```sh
 $ git clone https://gitlab.com/coderdojo-maldegem/scratch.git
