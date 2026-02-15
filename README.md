@@ -1,21 +1,21 @@
 CoderDojo Maldegem Scratch
 ==========================
 
-[This site](https://coderdojo-maldegem.gitlab.io/scratch/) will present Dutch Scratch tutorials and game creation challenges from our CoderDojo in Eelko, Belgium.
+[This Gitlab pages site](https://coderdojo-maldegem.gitlab.io/scratch/) and alternatively [this Github pages site](https://coderdojo-maldegem.githab.io/scratch-tutorials/) will present Dutch Scratch tutorials and game creation challenges from our CoderDojo in Maldegem, Belgium.
 
-Op [deze site](https://coderdojo-maldegem.gitlab.io/scratch/) komen Nederlandstalige leerpaden voor Scratch en uitleg voor het maken van spelletjes van de CoderDojo in Eelko, België.
+Op [deze Gitlab Pages site](https://coderdojo-maldegem.gitlab.io/scratch/) of [deze Github Pages site](https://coderdojo-maldegem.githab.io/scratch-tutorials/) komen Nederlandstalige leerpaden voor Scratch en uitleg voor het maken van spelletjes van de CoderDojo in Maldegem, België.
 
 ## contributions - bijdragen
 
-You can use the WebIDE button on the top of this page to edit the source files online and prepare a commit, which you save on a new branch which you can then request to be merged into *main*.
+You can use the WebIDE button on the top of the Gitlab page to edit the source files online and prepare a commit, which you save on a new branch which you can then request to be merged into *main*.
 Only maintainers can commit their changes upstream directly to *main*.
-Gitlab's continuous integration tool has set a post-receive hook on that branch, so that the markdown sources will be converted to html with python-markdown (in a docker container on the cloud).
+Github's and Gitlab's continuous integration tools have set a post-receive hook on that branch, so that the markdown sources will be converted to html with python-markdown (in a docker container on the cloud).
 The resulting pages are then copied and hosted.
 
-Om de bronbestanden te bewerken en een commit voor te bereiden kan je bovenaan een "WebIDE" knop klikken.
+Om de bronbestanden te bewerken en een commit voor te bereiden kan je bovenaan een "WebIDE" knop klikken op de Gitlab pagina.
 Je kan je commit dan "opslaan" met een beschrijving op een nieuwe branch en vragen (met een *merge request*) een een maintainer om je wijzigingen toe te voegen aan de *main* branch.
 Enkel maintainers kunnen de *main* branch rechtstreeks wijzigen.
-Telkens als die verandert, zal Gitlab de markdown pagina's in html omzetten en hosten.
+Telkens als die verandert, zal Gitlab de markdown pagina's in html omzetten en hosten. Ook via Github gebeurt dit.
 
 ## requisites - benodigdheden
 
