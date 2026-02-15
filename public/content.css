@@ -88,12 +88,13 @@ footer>a {
 }
 
 footer>a:active {
-  background-color: var(--tekst-kleur);
+  color: var(--link-kleur);
 }
 
 footer>a:active,
 footer>a:hover {
   border: 2px solid var(--tekst-kleur);
+  text-decoration: none;
 }
 
 em:before {
