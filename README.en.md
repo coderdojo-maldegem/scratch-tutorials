@@ -20,6 +20,8 @@ The resulting pages are then copied and hosted.
 
 If you want to build the pages locally, you'll need the above programs.
 
+Notice that: each command line is indicated with "$" by convention (you should remove "$").
+
 ```sh
 $ git clone https://gitlab.com/coderdojo-maldegem/scratch.git
 $ git lfs checkout
@@ -30,9 +32,10 @@ $ pip install markdown markdown-checklist
 $ make
 Running markdown_py on galgje/1/stap1.md galgje/1/stap1.html
 ...
-$ python -m http.server 8001 -b 127.0.0.1 &>/dev/null &
-$ firefox 127.0.0.1:8001 &>/dev/null &
+$ python localServe.py public
 ```
+
+The localServe.py script will try to spawn Firefox. Change it if you want to use a different browser.
 
 ## content
 

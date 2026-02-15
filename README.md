@@ -20,6 +20,8 @@ Telkens als die verandert, zal Gitlab de markdown pagina's in html omzetten en h
 
 Enkel als je de html pagina's plaatselijk wil genereren, heb de bovenstaande programma's nodig.
 
+Merk op: elke regel die met "$" begint is een opdrachtregel (laat "$" weg).
+
 ```sh
 $ git clone https://gitlab.com/coderdojo-maldegem/scratch.git
 $ git lfs checkout
@@ -30,11 +32,10 @@ $ pip install markdown markdown-checklist
 $ make
 Running markdown_py on galgje/1/stap1.md galgje/1/stap1.html
 ...
-$ python -m http.server 8001 -b 127.0.0.1 &>/dev/null &
-$ firefox 127.0.0.1:8001 &>/dev/null &
+$ python localServe.py public
 ```
 
-(Elke regel die met "$" begint is een opdrachtregel. Je moet waarschijnlijk in Windows `cmd.exe` gebruiken en `&>/dev/null` weglaten?)
+De code in localServe.py zal proberen een Firefox venster te openen. Verander dit als je een andere browser wenst te gebruiken.
 
 ## inhoud
 

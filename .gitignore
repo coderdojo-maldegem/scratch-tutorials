@@ -6,6 +6,7 @@
 !.github/**/*.yml
 !README.md
 !README.en.md
+!localServe.py
 !public
 !public/*.css
 !public/*.js
