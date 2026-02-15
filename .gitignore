@@ -1,10 +1,16 @@
 *
+!.gitignore
+!.gitattributes
+!.github
+!.github/*
+!.github/**/*.yml
+!README.md
 !public
 !public/*.css
 !public/*.js
 !public/*.svg
 !public/favicon.ico
-!public/img/
+!public/img
 !public/img/*.png
 !public/index.html
 !public/overzicht.html
