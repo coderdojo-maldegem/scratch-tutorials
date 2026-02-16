@@ -1,7 +1,7 @@
 SOURCE=src/
 TARGET=public/
 MD_FILES=$(wildcard $(SOURCE)**/*.md)
-GEVORDERD=pong dodgeball
+GEVORDERD=pong dodgeball snake
 EXPERT=simon galgje memory klok
 
 GRAAD=starter

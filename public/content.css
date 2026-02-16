@@ -110,13 +110,6 @@ em:after {
   padding-left: calc(32px + 1rem);
 }
 
-.doorhalen:before {
-  content: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="520px" height="120px" viewBox="0 0 20 5" stroke="red" stroke-linecap="round" stroke-width="0.5px"><line x1="0.5" y1="4.5" x2="19.5" y2="0.5"/></svg>');
-  position: relative;
-  top: 60px;
-  z-index: 2;
-}
-
 code.b {
   display: block;
   margin: auto;
@@ -140,16 +133,6 @@ code.b.xl>span {
 
 code.b.xxl>span {
   height: 2.5rem;
-}
-
-.doorhalen {
-  overflow: hidden !important;
-}
-
-.doorhalen>.scratchblocks {
-  margin-top: -100px;
-  z-index: 1;
-  filter: saturate(50%);
 }
 
 .blocks,

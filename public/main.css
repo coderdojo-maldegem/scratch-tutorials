@@ -49,8 +49,9 @@
       border-radius: 50%;
       width: 120px;
       height: 120px;
-      margin-left: calc((100vw - 140px)/2);
-      margin-top: 200px;
+      position: absolute;
+      left: calc((100vw - 120px)/2);
+      top: 200px;
       animation: spin 1s linear infinite;
     }
 
@@ -429,9 +430,5 @@ a:hover {
     #wrap main {
       grid-template-columns: 1fr 1fr 1fr;
     }
-  }
-
-  #loader {
-    margin-left: calc((840px - 140px)/2);
   }
 }
