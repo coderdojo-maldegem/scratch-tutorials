@@ -111,7 +111,7 @@ main {
 }
 
 #warn {
-  display: none;
+  display: block;
   width: 100%;
   background-color: darksalmon;
   padding: 1rem;

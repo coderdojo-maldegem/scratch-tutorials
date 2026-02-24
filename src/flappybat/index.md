@@ -8,9 +8,9 @@ Per overwonnen muur krijg je 1 punt!
 
 Voer het programma zelf eens uit!
 
-<http://scratch.mit.edu/projects/50502446/>
+<https://scratch.mit.edu/projects/50502446/>
 
-<http://bit.ly/uhscratchstudio>
+<https://bit.ly/uhscratchstudio>
 
 In dit project maak je kennis met de volgende concepten:
 
