@@ -110,6 +110,38 @@ em:after {
   padding-left: calc(32px + 1rem);
 }
 
+.variabele {
+  background: no-repeat top left/360px url('variabele.svg');
+}
+
+.lijst {
+  background: no-repeat top left/360px url('lijst.svg');
+}
+
+.variabele,
+.lijst {
+  width: 360px;
+  min-width: 360px;
+  max-width: 360px;
+  height: 316px;
+  min-height: 316px;
+  font-size: 16px;
+  padding-top: 120px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.variabele p,
+.lijst p {
+  margin: 0 0 20px 0;
+  width: 260px;
+}
+
+.variabele label,
+.lijst label {
+  display: inline-block;
+}
+
 code.b {
   display: block;
   margin: auto;
